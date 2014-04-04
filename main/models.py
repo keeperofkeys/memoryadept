@@ -8,6 +8,7 @@ FORMAT_CHOICES = (
     ('Casual', 'c'),
     ('Legacy', 'l'),
     ('Vintage', 'v'),
+    ('Cube', 'u'),
 )
 
 class Card(models.Model):
