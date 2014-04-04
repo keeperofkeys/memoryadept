@@ -1,0 +1,2013 @@
+{
+    "LEA": {
+        "name": "Limited Edition Alpha",
+        "code": "LEA",
+        "gathererCode": "1E",
+        "releaseDate": "1993-08-05",
+        "border": "black",
+        "type": "core",
+        "booster": [
+            "rare",
+            "uncommon",
+            "uncommon",
+            "uncommon",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common"
+        ],
+        "cards": [
+            {
+                "layout": "normal",
+                "type": "Creature — Elemental",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 94,
+                "name": "Air Elemental",
+                "subtypes": [
+                    "Elemental"
+                ],
+                "cmc": 5,
+                "rarity": "Uncommon",
+                "artist": "Richard Thomas",
+                "power": "4",
+                "toughness": "4",
+                "manaCost": "{3}{U}{U}",
+                "text": "Flying",
+                "flavor": "These spirits of the air are winsome and wild and cannot be truly contained. Only marginally intelligent, they often substitute whimsy for strategy, delighting in mischief and mayhem.",
+                "imageName": "air elemental"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 95,
+                "name": "Ancestral Recall",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Mark Poole",
+                "manaCost": "{U}",
+                "text": "Target player draws three cards.",
+                "imageName": "ancestral recall"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 96,
+                "name": "Animate Artifact",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Douglas Schuler",
+                "manaCost": "{3}{U}",
+                "text": "Enchant artifact\n\nAs long as enchanted artifact isn't a creature, it's an artifact creature with power and toughness each equal to its converted mana cost.",
+                "imageName": "animate artifact"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 48,
+                "name": "Animate Dead",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Anson Maddocks",
+                "manaCost": "{1}{B}",
+                "text": "Enchant creature card in a graveyard\n\nWhen Animate Dead enters the battlefield, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with Animate Dead.\" Return enchanted creature card to the battlefield under your control and attach Animate Dead to it. When Animate Dead leaves the battlefield, that creature's controller sacrifices it.\n\nEnchanted creature gets -1/-0.",
+                "imageName": "animate dead"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 232,
+                "name": "Animate Wall",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Dan Frazier",
+                "manaCost": "{W}",
+                "text": "Enchant Wall\n\nEnchanted Wall can attack as though it didn't have defender.",
+                "imageName": "animate wall"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 1,
+                "name": "Ankh of Mishra",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Amy Weber",
+                "manaCost": "{2}",
+                "text": "Whenever a land enters the battlefield, Ankh of Mishra deals 2 damage to that land's controller.",
+                "imageName": "ankh of mishra"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 233,
+                "name": "Armageddon",
+                "cmc": 4,
+                "rarity": "Rare",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{3}{W}",
+                "text": "Destroy all lands.",
+                "imageName": "armageddon"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 140,
+                "name": "Aspect of Wolf",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Jeff A. Menges",
+                "manaCost": "{1}{G}",
+                "text": "Enchant creature\n\nEnchanted creature gets +X/+Y, where X is half the number of Forests you control, rounded down, and Y is half the number of Forests you control, rounded up.",
+                "imageName": "aspect of wolf"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 49,
+                "name": "Bad Moon",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{1}{B}",
+                "text": "Black creatures get +1/+1.",
+                "imageName": "bad moon"
+            },
+            {
+                "layout": "normal",
+                "type": "Land — Swamp Mountain",
+                "types": [
+                    "Land"
+                ],
+                "multiverseid": 279,
+                "name": "Badlands",
+                "subtypes": [
+                    "Swamp",
+                    "Mountain"
+                ],
+                "rarity": "Rare",
+                "artist": "Rob Alexander",
+                "imageName": "badlands"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 234,
+                "name": "Balance",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Mark Poole",
+                "manaCost": "{1}{W}",
+                "text": "Each player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+                "imageName": "balance"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 2,
+                "name": "Basalt Monolith",
+                "cmc": 3,
+                "rarity": "Uncommon",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{3}",
+                "text": "Basalt Monolith doesn't untap during your untap step.\n\n{T}: Add {3} to your mana pool.\n\n{3}: Untap Basalt Monolith.",
+                "imageName": "basalt monolith"
+            },
+            {
+                "layout": "normal",
+                "type": "Land — Swamp Forest",
+                "types": [
+                    "Land"
+                ],
+                "multiverseid": 280,
+                "name": "Bayou",
+                "subtypes": [
+                    "Swamp",
+                    "Forest"
+                ],
+                "rarity": "Rare",
+                "artist": "Jesper Myrfors",
+                "imageName": "bayou"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Human Soldier",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 235,
+                "name": "Benalish Hero",
+                "subtypes": [
+                    "Human",
+                    "Soldier"
+                ],
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Douglas Schuler",
+                "power": "1",
+                "toughness": "1",
+                "manaCost": "{W}",
+                "text": "Banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)",
+                "flavor": "Benalia has a complex caste system that changes with the lunar year. No matter what the season, the only caste that cannot be attained by either heredity or money is that of the hero.",
+                "imageName": "benalish hero"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 141,
+                "name": "Berserk",
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Dan Frazier",
+                "manaCost": "{G}",
+                "text": "Cast Berserk only before the combat damage step.\n\nTarget creature gains trample and gets +X/+0 until end of turn, where X is its power. At the beginning of the next end step, destroy that creature if it attacked this turn.",
+                "imageName": "berserk"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Bird",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 142,
+                "name": "Birds of Paradise",
+                "subtypes": [
+                    "Bird"
+                ],
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Mark Poole",
+                "power": "0",
+                "toughness": "1",
+                "manaCost": "{G}",
+                "text": "Flying\n\n{T}: Add one mana of any color to your mana pool.",
+                "imageName": "birds of paradise"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Human Knight",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 50,
+                "name": "Black Knight",
+                "subtypes": [
+                    "Human",
+                    "Knight"
+                ],
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Jeff A. Menges",
+                "power": "2",
+                "toughness": "2",
+                "manaCost": "{B}{B}",
+                "text": "First strike (This creature deals combat damage before creatures without first strike.)\n\nProtection from white (This creature can't be blocked, targeted, dealt damage, or enchanted by anything white.)",
+                "flavor": "Battle doesn't need a purpose; the battle is its own purpose. You don't ask why a plague spreads or a field burns. Don't ask why I fight.",
+                "imageName": "black knight"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 3,
+                "name": "Black Lotus",
+                "cmc": 0,
+                "rarity": "Rare",
+                "artist": "Christopher Rush",
+                "manaCost": "{0}",
+                "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color to your mana pool.",
+                "imageName": "black lotus"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 4,
+                "name": "Black Vise",
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Richard Thomas",
+                "manaCost": "{1}",
+                "text": "As Black Vise enters the battlefield, choose an opponent.\n\nAt the beginning of the chosen player's upkeep, Black Vise deals X damage to that player, where X is the number of cards in his or her hand minus 4.",
+                "imageName": "black vise"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 236,
+                "name": "Black Ward",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Dan Frazier",
+                "manaCost": "{W}",
+                "text": "Enchant creature\n\nEnchanted creature has protection from black. This effect doesn't remove Black Ward.",
+                "imageName": "black ward"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 237,
+                "name": "Blaze of Glory",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Richard Thomas",
+                "manaCost": "{W}",
+                "text": "Cast Blaze of Glory only during combat before blockers are declared.\n\nTarget creature defending player controls can block any number of creatures this turn. It blocks each attacking creature this turn if able.",
+                "imageName": "blaze of glory"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 238,
+                "name": "Blessing",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Julie Baroh",
+                "manaCost": "{W}{W}",
+                "text": "Enchant creature\n\n{W}: Enchanted creature gets +1/+1 until end of turn.",
+                "imageName": "blessing"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 97,
+                "name": "Blue Elemental Blast",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Richard Thomas",
+                "manaCost": "{U}",
+                "text": "Choose one — Counter target red spell; or destroy target red permanent.",
+                "imageName": "blue elemental blast"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 239,
+                "name": "Blue Ward",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Dan Frazier",
+                "manaCost": "{W}",
+                "text": "Enchant creature\n\nEnchanted creature has protection from blue. This effect doesn't remove Blue Ward.",
+                "imageName": "blue ward"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Wraith",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 51,
+                "name": "Bog Wraith",
+                "subtypes": [
+                    "Wraith"
+                ],
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Jeff A. Menges",
+                "power": "3",
+                "toughness": "3",
+                "manaCost": "{3}{B}",
+                "text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)",
+                "flavor": "'Twas in the bogs of Cannelbrae\n\nMy mate did meet an early grave\n\n'Twas nothing left for us to save\n\nIn the peat-filled bogs of Cannelbrae.",
+                "imageName": "bog wraith"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 98,
+                "name": "Braingeyser",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Mark Tedin",
+                "manaCost": "{X}{U}{U}",
+                "text": "Target player draws X cards.",
+                "imageName": "braingeyser"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 186,
+                "name": "Burrowing",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Mark Poole",
+                "manaCost": "{R}",
+                "text": "Enchant creature\n\nEnchanted creature has mountainwalk.",
+                "imageName": "burrowing"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 143,
+                "name": "Camouflage",
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{G}",
+                "text": "Cast Camouflage only during your declare attackers step.\n\nThis turn, instead of declaring blockers, each defending player chooses any number of creatures he or she controls and divides them into a number of piles equal to the number of attacking creatures for whom that player is the defending player. Creatures he or she controls that can block additional creatures may likewise be put into additional piles. Assign each pile to a different one of those attacking creatures at random. Each creature in a pile that can block the creature that pile is assigned to does so. (Piles can be empty.)",
+                "imageName": "camouflage"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 240,
+                "name": "Castle",
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Dameon Willich",
+                "manaCost": "{3}{W}",
+                "text": "Untapped creatures you control get +0/+2.",
+                "imageName": "castle"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 5,
+                "name": "Celestial Prism",
+                "cmc": 3,
+                "rarity": "Uncommon",
+                "artist": "Amy Weber",
+                "manaCost": "{3}",
+                "text": "{2}, {T}: Add one mana of any color to your mana pool.",
+                "imageName": "celestial prism"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 144,
+                "name": "Channel",
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Richard Thomas",
+                "manaCost": "{G}{G}",
+                "text": "Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add {1} to your mana pool.",
+                "imageName": "channel"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 6,
+                "name": "Chaos Orb",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Mark Tedin",
+                "manaCost": "{2}",
+                "text": "{1}, {T}: If Chaos Orb is on the battlefield, flip Chaos Orb onto the battlefield from a height of at least one foot. If Chaos Orb turns over completely at least once during the flip, destroy all nontoken permanents it touches. Then destroy Chaos Orb.",
+                "imageName": "chaos orb"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 187,
+                "name": "Chaoslace",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Dameon Willich",
+                "manaCost": "{R}",
+                "text": "Target spell or permanent becomes red. (Its mana symbols remain unchanged.)",
+                "imageName": "chaoslace"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 241,
+                "name": "Circle of Protection: Blue",
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Dameon Willich",
+                "manaCost": "{1}{W}",
+                "text": "{1}: The next time a blue source of your choice would deal damage to you this turn, prevent that damage.",
+                "imageName": "circle of protection blue"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 242,
+                "name": "Circle of Protection: Green",
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Sandra Everingham",
+                "manaCost": "{1}{W}",
+                "text": "{1}: The next time a green source of your choice would deal damage to you this turn, prevent that damage.",
+                "imageName": "circle of protection green"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 243,
+                "name": "Circle of Protection: Red",
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Anson Maddocks",
+                "manaCost": "{1}{W}",
+                "text": "{1}: The next time a red source of your choice would deal damage to you this turn, prevent that damage.",
+                "imageName": "circle of protection red"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 244,
+                "name": "Circle of Protection: White",
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Douglas Schuler",
+                "manaCost": "{1}{W}",
+                "text": "{1}: The next time a white source of your choice would deal damage to you this turn, prevent that damage.",
+                "imageName": "circle of protection white"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact Creature — Beast",
+                "types": [
+                    "Artifact",
+                    "Creature"
+                ],
+                "multiverseid": 7,
+                "name": "Clockwork Beast",
+                "subtypes": [
+                    "Beast"
+                ],
+                "cmc": 6,
+                "rarity": "Rare",
+                "artist": "Drew Tucker",
+                "power": "0",
+                "toughness": "4",
+                "manaCost": "{6}",
+                "text": "Clockwork Beast enters the battlefield with seven +1/+0 counters on it.\n\nAt end of combat, if Clockwork Beast attacked or blocked this combat, remove a +1/+0 counter from it.\n\n{X}, {T}: Put up to X +1/+0 counters on Clockwork Beast. This ability can't cause the total number of +1/+0 counters on Clockwork Beast to be greater than seven. Activate this ability only during your upkeep.",
+                "imageName": "clockwork beast"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Shapeshifter",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 99,
+                "name": "Clone",
+                "subtypes": [
+                    "Shapeshifter"
+                ],
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Julie Baroh",
+                "power": "0",
+                "toughness": "0",
+                "manaCost": "{3}{U}",
+                "text": "You may have Clone enter the battlefield as a copy of any creature on the battlefield.",
+                "imageName": "clone"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Cockatrice",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 145,
+                "name": "Cockatrice",
+                "subtypes": [
+                    "Cockatrice"
+                ],
+                "cmc": 5,
+                "rarity": "Rare",
+                "artist": "Dan Frazier",
+                "power": "2",
+                "toughness": "4",
+                "manaCost": "{3}{G}{G}",
+                "text": "Flying\n\nWhenever Cockatrice blocks or becomes blocked by a non-Wall creature, destroy that creature at end of combat.",
+                "imageName": "cockatrice"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 245,
+                "name": "Consecrate Land",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Jeff A. Menges",
+                "manaCost": "{W}",
+                "text": "Enchant land\n\nEnchanted land has indestructible and can't be enchanted by other Auras.",
+                "imageName": "consecrate land"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 8,
+                "name": "Conservator",
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Amy Weber",
+                "manaCost": "{4}",
+                "text": "{3}, {T}: Prevent the next 2 damage that would be dealt to you this turn.",
+                "imageName": "conservator"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 52,
+                "name": "Contract from Below",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Douglas Schuler",
+                "manaCost": "{B}",
+                "text": "Remove Contract from Below from your deck before playing if you're not playing for ante.\n\nDiscard your hand, add the top card of your library to the ante, then draw seven cards.",
+                "imageName": "contract from below"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 100,
+                "name": "Control Magic",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Dameon Willich",
+                "manaCost": "{2}{U}{U}",
+                "text": "Enchant creature\n\nYou control enchanted creature.",
+                "imageName": "control magic"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 246,
+                "name": "Conversion",
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{2}{W}{W}",
+                "text": "At the beginning of your upkeep, sacrifice Conversion unless you pay {W}{W}.\n\nAll Mountains are Plains.",
+                "imageName": "conversion"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 9,
+                "name": "Copper Tablet",
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Amy Weber",
+                "manaCost": "{2}",
+                "text": "At the beginning of each player's upkeep, Copper Tablet deals 1 damage to that player.",
+                "imageName": "copper tablet"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 101,
+                "name": "Copy Artifact",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Amy Weber",
+                "manaCost": "{1}{U}",
+                "text": "You may have Copy Artifact enter the battlefield as a copy of any artifact on the battlefield, except it's an enchantment in addition to its other types.",
+                "imageName": "copy artifact"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 102,
+                "name": "Counterspell",
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Mark Poole",
+                "manaCost": "{U}{U}",
+                "text": "Counter target spell.",
+                "imageName": "counterspell"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Wurm",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 146,
+                "name": "Craw Wurm",
+                "subtypes": [
+                    "Wurm"
+                ],
+                "cmc": 6,
+                "rarity": "Common",
+                "artist": "Daniel Gelon",
+                "power": "6",
+                "toughness": "4",
+                "manaCost": "{4}{G}{G}",
+                "flavor": "The most terrifying thing about the Craw Wurm is probably the horrible crashing sound it makes as it speeds through the forest. This noise is so loud it echoes through the trees and seems to come from all directions at once.",
+                "imageName": "craw wurm"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 103,
+                "name": "Creature Bond",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Anson Maddocks",
+                "manaCost": "{1}{U}",
+                "text": "Enchant creature\n\nWhen enchanted creature dies, Creature Bond deals damage equal to that creature's toughness to the creature's controller.",
+                "imageName": "creature bond"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 247,
+                "name": "Crusade",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Mark Poole",
+                "manaCost": "{W}{W}",
+                "text": "White creatures get +1/+1.",
+                "imageName": "crusade"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 10,
+                "name": "Crystal Rod",
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Amy Weber",
+                "manaCost": "{1}",
+                "text": "Whenever a player casts a blue spell, you may pay {1}. If you do, you gain 1 life.",
+                "imageName": "crystal rod"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 53,
+                "name": "Cursed Land",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{2}{B}{B}",
+                "text": "Enchant land\n\nAt the beginning of the upkeep of enchanted land's controller, Cursed Land deals 1 damage to that player.",
+                "imageName": "cursed land"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 11,
+                "name": "Cyclopean Tomb",
+                "cmc": 4,
+                "rarity": "Rare",
+                "artist": "Anson Maddocks",
+                "manaCost": "{4}",
+                "text": "{2}, {T}: Put a mire counter on target non-Swamp land. That land is a Swamp for as long as it has a mire counter on it. Activate this ability only during your upkeep.\n\nWhen Cyclopean Tomb is put into a graveyard from the battlefield, at the beginning of each of your upkeeps for the rest of the game, remove all mire counters from a land that a mire counter was put onto with Cyclopean Tomb but that a mire counter has not been removed from with Cyclopean Tomb.",
+                "imageName": "cyclopean tomb"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 54,
+                "name": "Dark Ritual",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Sandra Everingham",
+                "manaCost": "{B}",
+                "text": "Add {B}{B}{B} to your mana pool.",
+                "imageName": "dark ritual"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 55,
+                "name": "Darkpact",
+                "cmc": 3,
+                "rarity": "Rare",
+                "artist": "Quinton Hoover",
+                "manaCost": "{B}{B}{B}",
+                "text": "Remove Darkpact from your deck before playing if you're not playing for ante.\n\nYou own target card in the ante. Exchange that card with the top card of your library.",
+                "imageName": "darkpact"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 248,
+                "name": "Death Ward",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Dan Frazier",
+                "manaCost": "{W}",
+                "text": "Regenerate target creature.",
+                "imageName": "death ward"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 56,
+                "name": "Deathgrip",
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Anson Maddocks",
+                "manaCost": "{B}{B}",
+                "text": "{B}{B}: Counter target green spell.",
+                "imageName": "deathgrip"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 57,
+                "name": "Deathlace",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Sandra Everingham",
+                "manaCost": "{B}",
+                "text": "Target spell or permanent becomes black. (Mana symbols on that permanent remain unchanged.)",
+                "imageName": "deathlace"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 58,
+                "name": "Demonic Attorney",
+                "cmc": 3,
+                "rarity": "Rare",
+                "artist": "Daniel Gelon",
+                "manaCost": "{1}{B}{B}",
+                "text": "Remove Demonic Attorney from your deck before playing if you're not playing for ante.\n\nEach player antes the top card of his or her library.",
+                "imageName": "demonic attorney"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Demon",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 59,
+                "name": "Demonic Hordes",
+                "subtypes": [
+                    "Demon"
+                ],
+                "cmc": 6,
+                "rarity": "Rare",
+                "artist": "Jesper Myrfors",
+                "power": "5",
+                "toughness": "5",
+                "manaCost": "{3}{B}{B}{B}",
+                "text": "{T}: Destroy target land.\n\nAt the beginning of your upkeep, unless you pay {B}{B}{B}, tap Demonic Hordes and sacrifice a land of an opponent's choice.",
+                "flavor": "Created to destroy Dominia, Demons can sometimes be bent to a more focused purpose.",
+                "imageName": "demonic hordes"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 60,
+                "name": "Demonic Tutor",
+                "cmc": 2,
+                "rarity": "Uncommon",
+                "artist": "Douglas Schuler",
+                "manaCost": "{1}{B}",
+                "text": "Search your library for a card and put that card into your hand. Then shuffle your library.",
+                "imageName": "demonic tutor"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 12,
+                "name": "Dingus Egg",
+                "cmc": 4,
+                "rarity": "Rare",
+                "artist": "Dan Frazier",
+                "manaCost": "{4}",
+                "text": "Whenever a land is put into a graveyard from the battlefield, Dingus Egg deals 2 damage to that land's controller.",
+                "imageName": "dingus egg"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 249,
+                "name": "Disenchant",
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Amy Weber",
+                "manaCost": "{1}{W}",
+                "text": "Destroy target artifact or enchantment.",
+                "imageName": "disenchant"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 188,
+                "name": "Disintegrate",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Anson Maddocks",
+                "manaCost": "{X}{R}",
+                "text": "Disintegrate deals X damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.",
+                "imageName": "disintegrate"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 13,
+                "name": "Disrupting Scepter",
+                "cmc": 3,
+                "rarity": "Rare",
+                "artist": "Dan Frazier",
+                "manaCost": "{3}",
+                "text": "{3}, {T}: Target player discards a card. Activate this ability only during your turn.",
+                "imageName": "disrupting scepter"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Dragon",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 189,
+                "name": "Dragon Whelp",
+                "subtypes": [
+                    "Dragon"
+                ],
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Amy Weber",
+                "power": "2",
+                "toughness": "3",
+                "manaCost": "{2}{R}{R}",
+                "text": "Flying\n\n{R}: Dragon Whelp gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice Dragon Whelp at the beginning of the next end step.",
+                "flavor": "\"O to be a dragon . . . of silkworm size or immense . . .\"\n\n—Marianne Moore, \"O to Be a Dragon\"",
+                "imageName": "dragon whelp"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 61,
+                "name": "Drain Life",
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Douglas Schuler",
+                "manaCost": "{X}{1}{B}",
+                "text": "Spend only black mana on X.\n\nDrain Life deals X damage to target creature or player. You gain life equal to the damage dealt, but not more life than the player's life total before Drain Life dealt damage or the creature's toughness.",
+                "imageName": "drain life"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 104,
+                "name": "Drain Power",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Douglas Schuler",
+                "manaCost": "{U}{U}",
+                "text": "Target player activates a mana ability of each land he or she controls. Then put all mana from that player's mana pool into yours.",
+                "imageName": "drain power"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Skeleton",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 62,
+                "name": "Drudge Skeletons",
+                "subtypes": [
+                    "Skeleton"
+                ],
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Sandra Everingham",
+                "power": "1",
+                "toughness": "1",
+                "manaCost": "{1}{B}",
+                "text": "{B}: Regenerate Drudge Skeletons. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
+                "flavor": "Bones scattered around us joined to form misshapen bodies. We struck at them repeatedly—they fell, but soon formed again, with the same mocking look on their faceless skulls.",
+                "imageName": "drudge skeletons"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Dwarf",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 190,
+                "name": "Dwarven Demolition Team",
+                "subtypes": [
+                    "Dwarf"
+                ],
+                "cmc": 3,
+                "rarity": "Uncommon",
+                "artist": "Kev Brockschmidt",
+                "power": "1",
+                "toughness": "1",
+                "manaCost": "{2}{R}",
+                "text": "{T}: Destroy target Wall.",
+                "flavor": "Foolishly, Najib retreated to his castle at El-Abar; the next morning he was dead. In just one night, the dwarven forces had reduced the mighty walls to mere rubble.",
+                "imageName": "dwarven demolition team"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Dwarf Warrior",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 191,
+                "name": "Dwarven Warriors",
+                "subtypes": [
+                    "Dwarf",
+                    "Warrior"
+                ],
+                "cmc": 3,
+                "rarity": "Common",
+                "artist": "Douglas Schuler",
+                "power": "1",
+                "toughness": "1",
+                "manaCost": "{2}{R}",
+                "text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
+                "imageName": "dwarven warriors"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Elemental",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 192,
+                "name": "Earth Elemental",
+                "subtypes": [
+                    "Elemental"
+                ],
+                "cmc": 5,
+                "rarity": "Uncommon",
+                "artist": "Dan Frazier",
+                "power": "4",
+                "toughness": "5",
+                "manaCost": "{3}{R}{R}",
+                "flavor": "Earth Elementals have the eternal strength of stone and the endurance of mountains. Primordially connected to the land they inhabit, they take a long-term view of things, scorning the impetuous haste of short-lived mortal creatures.",
+                "imageName": "earth elemental"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 193,
+                "name": "Earthbind",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Quinton Hoover",
+                "manaCost": "{R}",
+                "text": "Enchant creature\n\nWhen Earthbind enters the battlefield, if enchanted creature has flying, Earthbind deals 2 damage to that creature and Earthbind gains \"Enchanted creature loses flying.\"",
+                "imageName": "earthbind"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 194,
+                "name": "Earthquake",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Dan Frazier",
+                "manaCost": "{X}{R}",
+                "text": "Earthquake deals X damage to each creature without flying and each player.",
+                "imageName": "earthquake"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Elf Archer",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 147,
+                "name": "Elvish Archers",
+                "subtypes": [
+                    "Elf",
+                    "Archer"
+                ],
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Anson Maddocks",
+                "power": "2",
+                "toughness": "1",
+                "manaCost": "{1}{G}",
+                "text": "First strike",
+                "flavor": "I tell you, there was so many arrows flying about you couldn't hardly see the sun. So I says to young Angus, \"Well, at least now we're fighting in the shade\"",
+                "imageName": "elvish archers"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 63,
+                "name": "Evil Presence",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Sandra Everingham",
+                "manaCost": "{B}",
+                "text": "Enchant land\n\nEnchanted land is a Swamp.",
+                "imageName": "evil presence"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 195,
+                "name": "False Orders",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Anson Maddocks",
+                "manaCost": "{R}",
+                "text": "Cast False Orders only during the declare blockers step.\n\nRemove target creature defending player controls from combat. Creatures it was blocking that had become blocked by only that creature this combat become unblocked. You may have it block an attacking creature of your choice.",
+                "imageName": "false orders"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "White"
+                ],
+                "multiverseid": 250,
+                "name": "Farmstead",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 3,
+                "rarity": "Rare",
+                "artist": "Mark Poole",
+                "manaCost": "{W}{W}{W}",
+                "text": "Enchant land\n\nEnchanted land has \"At the beginning of your upkeep, you may pay {W}{W}. If you do, you gain 1 life.\"",
+                "imageName": "farmstead"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 148,
+                "name": "Fastbond",
+                "cmc": 1,
+                "rarity": "Rare",
+                "artist": "Mark Poole",
+                "manaCost": "{G}",
+                "text": "You may play any number of additional lands on each of your turns.\n\nWhenever you play a land, if it wasn't the first land you played this turn, Fastbond deals 1 damage to you.",
+                "imageName": "fastbond"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 64,
+                "name": "Fear",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 2,
+                "rarity": "Common",
+                "artist": "Mark Poole",
+                "manaCost": "{B}{B}",
+                "text": "Enchant creature (Target a creature as you cast this. This card enters the battlefield attached to that creature.)\n\nEnchanted creature has fear. (It can't be blocked except by artifact creatures and/or black creatures.)",
+                "imageName": "fear"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 105,
+                "name": "Feedback",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 3,
+                "rarity": "Uncommon",
+                "artist": "Quinton Hoover",
+                "manaCost": "{2}{U}",
+                "text": "Enchant enchantment\n\nAt the beginning of the upkeep of enchanted enchantment's controller, Feedback deals 1 damage to that player.",
+                "imageName": "feedback"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Elemental",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 196,
+                "name": "Fire Elemental",
+                "subtypes": [
+                    "Elemental"
+                ],
+                "cmc": 5,
+                "rarity": "Uncommon",
+                "artist": "Melissa Benson",
+                "power": "5",
+                "toughness": "4",
+                "manaCost": "{3}{R}{R}",
+                "flavor": "Fire Elementals are ruthless infernos, annihilating and consuming their foes in a frenzied holocaust. Crackling and blazing, they sear swift, terrible paths, leaving the land charred and scorched in their wake.",
+                "imageName": "fire elemental"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 197,
+                "name": "Fireball",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Mark Tedin",
+                "manaCost": "{X}{R}",
+                "text": "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.\n\nFireball costs {1} more to cast for each target beyond the first.",
+                "imageName": "fireball"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 198,
+                "name": "Firebreathing",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Dan Frazier",
+                "manaCost": "{R}",
+                "text": "Enchant creature\n\n{R}: Enchanted creature gets +1/+0 until end of turn.",
+                "flavor": "\"And topples round the dreary west\n\nA looming bastion fringed with fire.\"\n\n—Alfred, Lord Tennyson, \"In Memoriam\"",
+                "imageName": "firebreathing"
+            },
+            {
+                "layout": "normal",
+                "type": "Sorcery",
+                "types": [
+                    "Sorcery"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 199,
+                "name": "Flashfires",
+                "cmc": 4,
+                "rarity": "Uncommon",
+                "artist": "Dameon Willich",
+                "manaCost": "{3}{R}",
+                "text": "Destroy all Plains.",
+                "imageName": "flashfires"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment — Aura",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Blue"
+                ],
+                "multiverseid": 106,
+                "name": "Flight",
+                "subtypes": [
+                    "Aura"
+                ],
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Anson Maddocks",
+                "manaCost": "{U}",
+                "text": "Enchant creature\n\nEnchanted creature has flying.",
+                "imageName": "flight"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 149,
+                "name": "Fog",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Jesper Myrfors",
+                "manaCost": "{G}",
+                "text": "Prevent all combat damage that would be dealt this turn.",
+                "imageName": "fog"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Elemental",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 150,
+                "name": "Force of Nature",
+                "subtypes": [
+                    "Elemental"
+                ],
+                "cmc": 6,
+                "rarity": "Rare",
+                "artist": "Douglas Schuler",
+                "power": "8",
+                "toughness": "8",
+                "manaCost": "{2}{G}{G}{G}{G}",
+                "text": "Trample (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)\n\nAt the beginning of your upkeep, Force of Nature deals 8 damage to you unless you pay {G}{G}{G}{G}.",
+                "imageName": "force of nature"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 14,
+                "name": "Forcefield",
+                "cmc": 3,
+                "rarity": "Rare",
+                "artist": "Dan Frazier",
+                "manaCost": "{3}",
+                "text": "{1}: The next time an unblocked creature of your choice would deal combat damage to you this turn, prevent all but 1 of that damage.",
+                "imageName": "forcefield"
+            },
+            {
+                "layout": "normal",
+                "supertypes": [
+                    "Basic"
+                ],
+                "type": "Basic Land — Forest",
+                "types": [
+                    "Land"
+                ],
+                "multiverseid": 289,
+                "name": "Forest",
+                "subtypes": [
+                    "Forest"
+                ],
+                "rarity": "Basic Land",
+                "artist": "Christopher Rush",
+                "text": "G",
+                "variations": [
+                    288
+                ],
+                "imageName": "forest1"
+            },
+            {
+                "layout": "normal",
+                "supertypes": [
+                    "Basic"
+                ],
+                "type": "Basic Land — Forest",
+                "types": [
+                    "Land"
+                ],
+                "multiverseid": 288,
+                "name": "Forest",
+                "subtypes": [
+                    "Forest"
+                ],
+                "rarity": "Basic Land",
+                "artist": "Christopher Rush",
+                "text": "G",
+                "variations": [
+                    289
+                ],
+                "imageName": "forest2"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 200,
+                "name": "Fork",
+                "cmc": 2,
+                "rarity": "Rare",
+                "artist": "Amy Weber",
+                "manaCost": "{R}{R}",
+                "text": "Copy target instant or sorcery spell, except that the copy is red. You may choose new targets for the copy.",
+                "imageName": "fork"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Shade",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 65,
+                "name": "Frozen Shade",
+                "subtypes": [
+                    "Shade"
+                ],
+                "cmc": 3,
+                "rarity": "Common",
+                "artist": "Douglas Schuler",
+                "power": "0",
+                "toughness": "1",
+                "manaCost": "{2}{B}",
+                "text": "{B}: Frozen Shade gets +1/+1 until end of turn.",
+                "flavor": "\"There are some qualities—some incorporate things,/ That have a double life, which thus is made/ A type of twin entity which springs/ From matter and light, evinced in solid and shade.\"\n\n—Edgar Allan Poe, \"Silence\"",
+                "imageName": "frozen shade"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Fungus Lizard",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 151,
+                "name": "Fungusaur",
+                "subtypes": [
+                    "Fungus",
+                    "Lizard"
+                ],
+                "cmc": 4,
+                "rarity": "Rare",
+                "artist": "Daniel Gelon",
+                "power": "2",
+                "toughness": "2",
+                "manaCost": "{3}{G}",
+                "text": "Whenever Fungusaur is dealt damage, put a +1/+1 counter on it.",
+                "flavor": "Rather than sheltering her young, the female Fungusaur often injures her own offspring, thereby ensuring their rapid growth.",
+                "imageName": "fungusaur"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Avatar",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 152,
+                "name": "Gaea's Liege",
+                "subtypes": [
+                    "Avatar"
+                ],
+                "cmc": 6,
+                "rarity": "Rare",
+                "artist": "Dameon Willich",
+                "power": "*",
+                "toughness": "*",
+                "manaCost": "{3}{G}{G}{G}",
+                "text": "As long as Gaea's Liege isn't attacking, its power and toughness are each equal to the number of Forests you control. As long as Gaea's Liege is attacking, its power and toughness are each equal to the number of Forests defending player controls.\n\n{T}: Target land becomes a Forest until Gaea's Liege leaves the battlefield.",
+                "imageName": "gaea's liege"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 15,
+                "name": "Gauntlet of Might",
+                "cmc": 4,
+                "rarity": "Rare",
+                "artist": "Christopher Rush",
+                "manaCost": "{4}",
+                "text": "Red creatures get +1/+1.\n\nWhenever a Mountain is tapped for mana, its controller adds {R} to his or her mana pool (in addition to the mana the land produces).",
+                "imageName": "gauntlet of might"
+            },
+            {
+                "layout": "normal",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 153,
+                "name": "Giant Growth",
+                "cmc": 1,
+                "rarity": "Common",
+                "artist": "Sandra Everingham",
+                "manaCost": "{G}",
+                "text": "Target creature gets +3/+3 until end of turn.",
+                "imageName": "giant growth"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Spider",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Green"
+                ],
+                "multiverseid": 154,
+                "name": "Giant Spider",
+                "subtypes": [
+                    "Spider"
+                ],
+                "cmc": 4,
+                "rarity": "Common",
+                "artist": "Sandra Everingham",
+                "power": "2",
+                "toughness": "4",
+                "manaCost": "{3}{G}",
+                "text": "Reach (This creature can block creatures with flying.)",
+                "flavor": "While it possesses potent venom, the Giant Spider often chooses not to paralyze its victims. Perhaps the creature enjoys the gentle rocking motion caused by its captives' struggles to escape its web.",
+                "imageName": "giant spider"
+            },
+            {
+                "layout": "normal",
+                "type": "Artifact",
+                "types": [
+                    "Artifact"
+                ],
+                "multiverseid": 16,
+                "name": "Glasses of Urza",
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Douglas Schuler",
+                "manaCost": "{1}",
+                "text": "{T}: Look at target player's hand.",
+                "imageName": "glasses of urza"
+            },
+            {
+                "layout": "normal",
+                "type": "Enchantment",
+                "types": [
+                    "Enchantment"
+                ],
+                "colors": [
+                    "Black"
+                ],
+                "multiverseid": 66,
+                "name": "Gloom",
+                "cmc": 3,
+                "rarity": "Uncommon",
+                "artist": "Dan Frazier",
+                "manaCost": "{2}{B}",
+                "text": "White spells cost {3} more to cast.\n\nActivated abilities of white enchantments cost {3} more to activate.",
+                "imageName": "gloom"
+            },
+            {
+                "layout": "normal",
+                "type": "Creature — Goblin Warrior",
+                "types": [
+                    "Creature"
+                ],
+                "colors": [
+                    "Red"
+                ],
+                "multiverseid": 201,
+                "name": "Goblin Balloon Brigade",
+                "subtypes": [
+                    "Goblin",
+                    "Warrior"
+                ],
+                "cmc": 1,
+                "rarity": "Uncommon",
+                "artist": "Andi Rusu",
+                "power": "1",
+                "toughness": "1",
+                "manaCost": "{R}",
+                "text": "{R}: Goblin Balloon Brigade gains flying until end of turn.",
+                "flavor": "\"From up here we can drop rocks and arrows and more rocks\" \"Uh, yeah boss, but how do we get down?\"",
+                "imageName": "goblin balloon brigade"
+            }]
+    }
+}
