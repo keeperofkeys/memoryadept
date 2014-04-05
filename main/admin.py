@@ -2,6 +2,10 @@ from django.contrib import admin
 from models import *
 
 
+class SetAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Set, SetAdmin)
+
 class CardAdmin(admin.ModelAdmin):
     pass
 admin.site.register(Card, CardAdmin)

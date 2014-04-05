@@ -26,7 +26,7 @@
         "cards": [
             {
                 "layout": "normal",
-                "type": "Creature — Elemental",
+                "type": "Creature - Elemental",
                 "types": [
                     "Creature"
                 ],
@@ -68,7 +68,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -89,7 +89,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -110,7 +110,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -164,7 +164,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -203,7 +203,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Land — Swamp Mountain",
+                "type": "Land - Swamp Mountain",
                 "types": [
                     "Land"
                 ],
@@ -252,7 +252,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Land — Swamp Forest",
+                "type": "Land - Swamp Forest",
                 "types": [
                     "Land"
                 ],
@@ -268,7 +268,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Human Soldier",
+                "type": "Creature - Human Soldier",
                 "types": [
                     "Creature"
                 ],
@@ -311,7 +311,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Bird",
+                "type": "Creature - Bird",
                 "types": [
                     "Creature"
                 ],
@@ -334,7 +334,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Human Knight",
+                "type": "Creature - Human Knight",
                 "types": [
                     "Creature"
                 ],
@@ -389,7 +389,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -428,7 +428,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -462,12 +462,12 @@
                 "rarity": "Common",
                 "artist": "Richard Thomas",
                 "manaCost": "{U}",
-                "text": "Choose one — Counter target red spell; or destroy target red permanent.",
+                "text": "Choose one - Counter target red spell; or destroy target red permanent.",
                 "imageName": "blue elemental blast"
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -488,7 +488,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Wraith",
+                "type": "Creature - Wraith",
                 "types": [
                     "Creature"
                 ],
@@ -530,7 +530,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -725,7 +725,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Artifact Creature — Beast",
+                "type": "Artifact Creature - Beast",
                 "types": [
                     "Artifact",
                     "Creature"
@@ -746,7 +746,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Shapeshifter",
+                "type": "Creature - Shapeshifter",
                 "types": [
                     "Creature"
                 ],
@@ -769,7 +769,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Cockatrice",
+                "type": "Creature - Cockatrice",
                 "types": [
                     "Creature"
                 ],
@@ -792,7 +792,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -846,7 +846,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -936,7 +936,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Wurm",
+                "type": "Creature - Wurm",
                 "types": [
                     "Creature"
                 ],
@@ -959,7 +959,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1013,7 +1013,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1157,7 +1157,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Demon",
+                "type": "Creature - Demon",
                 "types": [
                     "Creature"
                 ],
@@ -1265,7 +1265,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Dragon",
+                "type": "Creature - Dragon",
                 "types": [
                     "Creature"
                 ],
@@ -1284,7 +1284,7 @@
                 "toughness": "3",
                 "manaCost": "{2}{R}{R}",
                 "text": "Flying\n\n{R}: Dragon Whelp gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice Dragon Whelp at the beginning of the next end step.",
-                "flavor": "\"O to be a dragon . . . of silkworm size or immense . . .\"\n\n—Marianne Moore, \"O to Be a Dragon\"",
+                "flavor": "\"O to be a dragon . . . of silkworm size or immense . . .\"\n\n-Marianne Moore, \"O to Be a Dragon\"",
                 "imageName": "dragon whelp"
             },
             {
@@ -1325,7 +1325,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Skeleton",
+                "type": "Creature - Skeleton",
                 "types": [
                     "Creature"
                 ],
@@ -1344,12 +1344,12 @@
                 "toughness": "1",
                 "manaCost": "{1}{B}",
                 "text": "{B}: Regenerate Drudge Skeletons. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",
-                "flavor": "Bones scattered around us joined to form misshapen bodies. We struck at them repeatedly—they fell, but soon formed again, with the same mocking look on their faceless skulls.",
+                "flavor": "Bones scattered around us joined to form misshapen bodies. We struck at them repeatedly-they fell, but soon formed again, with the same mocking look on their faceless skulls.",
                 "imageName": "drudge skeletons"
             },
             {
                 "layout": "normal",
-                "type": "Creature — Dwarf",
+                "type": "Creature - Dwarf",
                 "types": [
                     "Creature"
                 ],
@@ -1373,7 +1373,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Dwarf Warrior",
+                "type": "Creature - Dwarf Warrior",
                 "types": [
                     "Creature"
                 ],
@@ -1397,7 +1397,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Elemental",
+                "type": "Creature - Elemental",
                 "types": [
                     "Creature"
                 ],
@@ -1420,7 +1420,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1459,7 +1459,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Elf Archer",
+                "type": "Creature - Elf Archer",
                 "types": [
                     "Creature"
                 ],
@@ -1484,7 +1484,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1523,7 +1523,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1562,7 +1562,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1583,7 +1583,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1604,7 +1604,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Elemental",
+                "type": "Creature - Elemental",
                 "types": [
                     "Creature"
                 ],
@@ -1645,7 +1645,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1662,7 +1662,7 @@
                 "artist": "Dan Frazier",
                 "manaCost": "{R}",
                 "text": "Enchant creature\n\n{R}: Enchanted creature gets +1/+0 until end of turn.",
-                "flavor": "\"And topples round the dreary west\n\nA looming bastion fringed with fire.\"\n\n—Alfred, Lord Tennyson, \"In Memoriam\"",
+                "flavor": "\"And topples round the dreary west\n\nA looming bastion fringed with fire.\"\n\n-Alfred, Lord Tennyson, \"In Memoriam\"",
                 "imageName": "firebreathing"
             },
             {
@@ -1685,7 +1685,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Enchantment — Aura",
+                "type": "Enchantment - Aura",
                 "types": [
                     "Enchantment"
                 ],
@@ -1724,7 +1724,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Elemental",
+                "type": "Creature - Elemental",
                 "types": [
                     "Creature"
                 ],
@@ -1765,7 +1765,7 @@
                 "supertypes": [
                     "Basic"
                 ],
-                "type": "Basic Land — Forest",
+                "type": "Basic Land - Forest",
                 "types": [
                     "Land"
                 ],
@@ -1787,7 +1787,7 @@
                 "supertypes": [
                     "Basic"
                 ],
-                "type": "Basic Land — Forest",
+                "type": "Basic Land - Forest",
                 "types": [
                     "Land"
                 ],
@@ -1824,7 +1824,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Shade",
+                "type": "Creature - Shade",
                 "types": [
                     "Creature"
                 ],
@@ -1843,12 +1843,12 @@
                 "toughness": "1",
                 "manaCost": "{2}{B}",
                 "text": "{B}: Frozen Shade gets +1/+1 until end of turn.",
-                "flavor": "\"There are some qualities—some incorporate things,/ That have a double life, which thus is made/ A type of twin entity which springs/ From matter and light, evinced in solid and shade.\"\n\n—Edgar Allan Poe, \"Silence\"",
+                "flavor": "\"There are some qualities-some incorporate things,/ That have a double life, which thus is made/ A type of twin entity which springs/ From matter and light, evinced in solid and shade.\"\n\n-Edgar Allan Poe, \"Silence\"",
                 "imageName": "frozen shade"
             },
             {
                 "layout": "normal",
-                "type": "Creature — Fungus Lizard",
+                "type": "Creature - Fungus Lizard",
                 "types": [
                     "Creature"
                 ],
@@ -1873,7 +1873,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Avatar",
+                "type": "Creature - Avatar",
                 "types": [
                     "Creature"
                 ],
@@ -1929,7 +1929,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Spider",
+                "type": "Creature - Spider",
                 "types": [
                     "Creature"
                 ],
@@ -1986,7 +1986,7 @@
             },
             {
                 "layout": "normal",
-                "type": "Creature — Goblin Warrior",
+                "type": "Creature - Goblin Warrior",
                 "types": [
                     "Creature"
                 ],
