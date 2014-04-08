@@ -12,6 +12,9 @@ def go(path="sample_data.json"):
         set_data = data[set_id]
         set, new_set_flag = Set.objects.get_or_create(code=set_data['code'], name=set_data['name'])
         
+        if new_set_flag:
+            print set_data['name']
+            
         for card_data in set_data['cards']:
             card_name = card_data['name']
             
