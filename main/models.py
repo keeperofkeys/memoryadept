@@ -1,14 +1,14 @@
 from django.db import models
 
 FORMAT_CHOICES = (
-    ('None', ''),
-    ('Standard', 's'),
-    ('Modern', 'm'),
-    ('EDH/Commander', 'e'),
-    ('Casual', 'c'),
-    ('Legacy', 'l'),
-    ('Vintage', 'v'),
-    ('Cube', 'u'),
+    ('', 'None'),
+    ('s', 'Standard'),
+    ('m', 'Modern'),
+    ('e', 'EDH/Commander'),
+    ('c', 'Casual'),
+    ('l', 'Legacy'),
+    ('v', 'Vintage'),
+    ('u', 'Cube'),
 )
 
 class Set(models.Model):
