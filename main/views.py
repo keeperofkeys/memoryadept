@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from main.forms import LocationForm
 
+@csrf_exempt
 def newLocation(request):
     form = LocationForm()
     
