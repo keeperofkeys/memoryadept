@@ -4,4 +4,4 @@ import main.models as m
 class LocationForm(ModelForm):
     class Meta:
         model = m.Location
-        fields = ['name', 'description', 'cards', 'owner', 'format']
+        fields = ['name', 'description', 'owner', 'format']
