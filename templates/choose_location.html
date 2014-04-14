@@ -1,0 +1,11 @@
+{% extends 'jace.html' %}
+
+{% block content %}
+<h1>Locations</h1>
+<ul>
+  {% for loc in locations %}
+  <li><a href="{% url 'location-edit' loc.id %}"{{ loc }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
