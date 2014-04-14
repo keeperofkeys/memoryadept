@@ -27,16 +27,6 @@ def go(path="AllSets.json"):
         card.types = types
         card.sets.add(set)
         card.save()
-        
-        #printings = list(Card.objects.filter(name=card_name))
-        #if card_data['type'].lower() == "scheme":
-        #    print card_name
-        
-        
-        #for other_card in printings:
-        #    other_card.sets.add(card)
-        #    other_card.save()
-            
 
 def card_generator(path="AllSets.json"):
     with open(path) as json_file:

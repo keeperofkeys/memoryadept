@@ -3,7 +3,12 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
 from main.forms import LocationForm
-from main.models import Location, Card
+from main.models import Location, Card, Type
+
+EXCLUDED_CARD_TYPES = [
+    Type.objects.get(name='Plane'),
+    Type.objects.get(name='Scheme'),
+]
 
 @csrf_exempt
 def newLocation(request):
@@ -17,7 +22,6 @@ def newLocation(request):
             context.update({'form' : form })
     else:
         form = LocationForm()
-        #context.update(csrf(request))
         context.update({'form' : form })
     return render(request, 'new_location.html', context)
     
@@ -32,5 +36,12 @@ def locationEdit(request, location_id):
         })
     
 def cardListJSON(request):
-    all_cards = Card.objects.all().order_by('name').distinct()
-    return HttpResponse(json.dumps([card.name for card in all_cards]), "application/json") 
+    card_stuff = []
+    for card in Card.objects.all().order_by('name'):
+        types = list(card.types.all())
+        for excluded_type in EXCLUDED_CARD_TYPES:
+            if excluded_type in types:
+                break
+        else:
+            card_stuff.append({'value' : card.name, 'data' : card.id })
+    return HttpResponse(json.dumps(card_stuff), "application/json") 

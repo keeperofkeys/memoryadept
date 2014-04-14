@@ -26,14 +26,10 @@ class Type(models.Model):
 
 class Card(models.Model):
     name = models.CharField(max_length=1024)
-    #set = models.ForeignKey(Set)
     types = models.ManyToManyField(Type, blank=True)
     sets = models.ManyToManyField(Set, blank=True, null=True)
     
     def __unicode__(self):
-        #if self.sets.all().count() > 1:
-        #    return '%s (%s)' % (self.name, self.set)
-        #else:
         return self.name
     
 class Person(models.Model):
