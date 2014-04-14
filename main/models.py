@@ -18,16 +18,23 @@ class Set(models.Model):
     def __unicode__(self):
         return self.name
 
-class Card(models.Model):
-    name = models.CharField(max_length=1024)
-    set = models.ForeignKey(Set)
-    others = models.ManyToManyField('Card', blank=True, null=True)
+class Type(models.Model):
+    name = models.CharField(max_length=30)
     
     def __unicode__(self):
-        if len(self.others.all()) > 0:
-            return '%s (%s)' % (self.name, self.set)
-        else:
-            return self.name
+        return self.name
+
+class Card(models.Model):
+    name = models.CharField(max_length=1024)
+    #set = models.ForeignKey(Set)
+    types = models.ManyToManyField(Type, blank=True)
+    sets = models.ManyToManyField(Set, blank=True, null=True)
+    
+    def __unicode__(self):
+        #if self.sets.all().count() > 1:
+        #    return '%s (%s)' % (self.name, self.set)
+        #else:
+        return self.name
     
 class Person(models.Model):
     name = models.CharField(max_length=100)
@@ -47,8 +54,8 @@ class CardMap(models.Model):
     
 class Location(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField()
-    cards = models.ManyToManyField(Card, through=CardMap)
+    description = models.TextField(blank=True)
+    cards = models.ManyToManyField(Card, through=CardMap, blank=True)
     owner = models.ForeignKey(Person)
     format = models.CharField(choices=FORMAT_CHOICES, max_length=1)
     

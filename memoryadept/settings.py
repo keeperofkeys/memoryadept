@@ -63,14 +63,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', #'django.db.backends.sqlite3',
         'NAME': 'memoryadept', #os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': 'root',
-        'PASSSWORD': '9while9',
+        'PASSWORD': '9while9',
     }
 }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'
 
 TIME_ZONE = 'UTC'
 
