@@ -52,8 +52,8 @@ class Location(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     cards = models.ManyToManyField(Card, through=CardMap, blank=True)
-    owner = models.ForeignKey(Person)
-    format = models.CharField(choices=FORMAT_CHOICES, max_length=1)
+    owner = models.ForeignKey(Person, blank=True, null=True)
+    format = models.CharField(choices=FORMAT_CHOICES, max_length=1, default='')
     
     def __unicode__(self):
         return self.name

@@ -3,7 +3,33 @@
 {% block content %}
 <h1>Edit {{ location }}</h1>
 
+<p>Select a location...</p>
+<div id="location">
+  {% for loc in locations %}
+  <option name="{{ loc.name }}"{% if loc.name == selected_location.name %} selected="selected"{% endif %}>{{ loc.name }}</option>
+  {% endfor %}
+</div>
+<form action="" id="create-new">
+<p>... or create a new one...</p>
+<input name="new-location" id="new-location" type="text">
+<button type="submit">Create</button>
+</form>
+{% endblock %}
 
-
-
+{% block extrascript %}
+  <script type="text/javascript">
+  $('#create-new').on('submit', function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '/create-location',
+      method: 'post',
+      data: {
+        'new-location' : $('#new-location').val()
+      },
+      success: function(json) {
+        alert(json);
+      }
+    });
+  });
+  </script>
 {% endblock %}
