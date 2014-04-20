@@ -4,11 +4,11 @@
 <h1>Edit {{ location }}</h1>
 
 <p>Select a location...</p>
-<select id="location">
-{% for loc in locations %}
-<option name="{{ loc.name }}"{% if loc.name == selected_location.name %} selected="selected"{% endif %}>{{ loc.name }}</option>
-{% endfor %}
-</select>
+<form id="locations">
+  {% for loc in locations %}
+  <input type="radio" name="chosen_location" id="cb{{ loc.id }}"{% if loc.name == selected_location.name %} checked="checked"{% endif %}><label for="cb{{ loc.id }}">{{ loc.name }}</label>
+  {% endfor %}
+</form>
 <form action="" id="create-new">
 <p>... or create a new one...</p>
 <input name="new-location" id="new-location" type="text">
@@ -27,7 +27,18 @@
         'new-location' : $('#new-location').val()
       },
       success: function(json) {
-        alert(json);
+        if (json.location_id) {
+          if (json.new === true) {
+            // add to list
+            var newHtml = '<input type="radio" name="chosen_location" id="cb' + json.location_id + '">';
+            newHtml += '<label for="cb' + json.location_id + '">' + json.location_name + '</label>'
+            $('#locations').append($(newHtml));
+          } 
+          $('#locations #cb' + json.location_id).prop('checked', true);
+
+        } else {
+          alert('fell over');
+        }
       }
     });
   });

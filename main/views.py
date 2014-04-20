@@ -57,6 +57,7 @@ def get_or_create_location(request):
         location, flag = Location.objects.get_or_create(name=name)
         response_obj.update({
             'location_id' : location.id,
+            'location_name' : location.name,
             'new' : flag,
         })
         
