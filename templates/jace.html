@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <html>
   <head>
     <title>Memory Adept - {% block page-title %}Home{% endblock %}</title>
+    <link href="{% static 'stylesheets/screen.css' %}" rel="stylesheet">
   </head>
   <body>
   {% block content %}{% endblock %}

@@ -1,0 +1,20 @@
+#locations {
+  li {
+    float: left;
+    width: 45%;
+    
+    &:nth-child(2n) {
+      margin-right: 5%;
+    }
+  }
+  
+}
+
+#edit-card-list {
+  td, td {
+    width: 400px;
+    &:first-child {
+      width: 100px;
+    }
+  }
+}

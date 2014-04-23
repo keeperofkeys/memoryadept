@@ -1,0 +1,12 @@
+$vertical-space: 15px;
+
+body {
+  margin: 0 auto;
+  max-width: 1024px;
+  
+}
+
+form {
+  clear: both;
+  margin-top: $vertical-space;
+}

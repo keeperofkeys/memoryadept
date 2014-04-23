@@ -1,3 +1,5 @@
+"use strict";
+
 $('#create-new').on('submit', function(e) {
   e.preventDefault();
   $.ajax({
