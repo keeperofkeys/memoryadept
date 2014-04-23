@@ -1,8 +1,10 @@
 import json
 import pdb
+from django.core.cache import cache
 from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+
 from main.forms import LocationForm
 from main.models import Location, Card, Type
 
@@ -39,14 +41,18 @@ def locationEdit(request, location_id=None):
 
 #AJAX stuff
 def cardListJSON(request):
-    card_stuff = []
-    for card in Card.objects.all().order_by('name'):
-        types = list(card.types.all())
-        for excluded_type in EXCLUDED_CARD_TYPES:
-            if excluded_type in types:
-                break
-        else:
-            card_stuff.append({'value' : card.name, 'data' : card.id })
+    card_stuff = cache.get('full_card_list', [])
+    if not card_stuff:
+        for card in Card.objects.all().order_by('name'):
+            types = list(card.types.all())
+            for excluded_type in EXCLUDED_CARD_TYPES:
+                if excluded_type in types:
+                    break
+            else:
+                card_stuff.append({'value' : card.name, 'data' : card.id })
+                
+        cache.set('full_card_list', card_stuff, None) # cache indefinitely
+    
     return HttpResponse(json.dumps(card_stuff), "application/json")
     
 def get_or_create_location(request):

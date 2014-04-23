@@ -93,3 +93,10 @@ TEMPLATE_DIRS = (
 STATICFILES_DIRS = (
     'c:\\memoryadept\\memoryadept\\assets',
 )
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'c:/memoryadept/memoryadept/cache',
+    }
+}
