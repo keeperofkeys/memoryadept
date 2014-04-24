@@ -1,5 +1,7 @@
 import json
 import pdb
+import re
+
 from django.core.cache import cache
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -49,8 +51,8 @@ def cardListJSON(request):
                 if excluded_type in types:
                     break
             else:
-                card_stuff.append({'value' : card.name, 'data' : card.id })
-                
+                card_stuff.append({'value' : re.sub(r'\W+', '', card.name), 'data' : card.name })
+
         cache.set('full_card_list', card_stuff, None) # cache indefinitely
     
     return HttpResponse(json.dumps(card_stuff), "application/json")

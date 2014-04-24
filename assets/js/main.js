@@ -1,5 +1,5 @@
 "use strict";
-
+var cardList;
 $('#create-new').on('submit', function(e) {
   e.preventDefault();
   $.ajax({
@@ -28,7 +28,36 @@ $('#create-new').on('submit', function(e) {
 // clicked radio or made new location
 $('#locations input[name=chosen_location]').on('change', function() {
   // load cards
+  var locationId = this.id.substr(2), // slice off "cb" prefix
+      $table = $('#edit-card-list'),
+      $rowTemplate = $table.find('tr:last-child');
   $.ajax({
-    url: '/location-contents/' + $(this).val
+    url: '/location-contents/' + locationId,
+    method: 'post',
+    success: function(cards) {
+      for (var i=0; i<cards.length; i++) {
+        $table.append($rowTemplate);
+      }
+    }
   });
+});
+
+$('.autocomplete').autocomplete({
+   //serviceUrl: '/json/',
+   lookup: cardList,
+   onSelect: function(suggestion) {
+     alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+   }
+});
+
+$(document).ready(function() {
+    $.ajax({
+       url: '/json/',
+       method: 'post',
+       async: false,
+       dataType: 'json',
+       success: function(json) {
+         cardList = json;
+       }
+    });
 });

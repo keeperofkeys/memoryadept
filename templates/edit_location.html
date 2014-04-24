@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <td><input type="text" name="n0"></td>
-      <td><input type="text" name="c0"></td>
+      <td><input type="text" name="c0" class="autocomplete"></td>
     </tr>
   </table>
   <button type="submit" method="post" action="">Done</button>
@@ -34,5 +34,6 @@
 {% endblock %}
 
 {% block extrascript %}
+  <script type="text/javascript" src="{% static 'js/jquery.autocomplete.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 {% endblock %}

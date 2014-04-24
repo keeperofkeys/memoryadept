@@ -18,7 +18,8 @@ urlpatterns = patterns('',
     #url(r'^locations$', locationList, name='location-list'),
     url(r'^locations$', locationEdit, name='location-edit'),
     url(r'^create-location$', get_or_create_location, name="get_or_create_location"),
-    url(r'^json$', cardListJSON),
+    url(r'^location-contents/(?P<location_id>[0-9]+)', location_contents, name="location-contents"),
+    url(r'^json/', cardListJSON),
     url(r'^admin/', include(admin.site.urls)),
 )# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 #urlpatterns += staticfiles_urlpatterns()
