@@ -43,19 +43,18 @@ def locationEdit(request, location_id=None):
 
 #AJAX stuff
 def cardListJSON(request):
-    card_stuff = cache.get('full_card_list', [])
-    if not card_stuff:
-        for card in Card.objects.all().order_by('name'):
-            types = list(card.types.all())
-            for excluded_type in EXCLUDED_CARD_TYPES:
-                if excluded_type in types:
-                    break
-            else:
-                card_stuff.append({'value' : re.sub(r'\W+', '', card.name), 'data' : card.name })
-
-        cache.set('full_card_list', card_stuff, None) # cache indefinitely
-    
+    card_stuff = _get_card_tuples()
     return HttpResponse(json.dumps(card_stuff), "application/json")
+    
+def suggestions(request):
+    search_string = request.GET.get('query')
+    card_list
+    
+def location_contents(request, location_id):
+    location = Location.objects.get(id=location_id)
+    #pdb.set_trace()
+    cards = [(card.name, card.cardmap_owner, card.cardmap__is_proxy, card.cardmap__is_foil ) for card in location.cards.all()]
+    return HttpResponse(json.dumps(cards), "application/json")
     
 def get_or_create_location(request):
     name = request.POST.get('new-location')
@@ -75,3 +74,40 @@ def get_or_create_location(request):
         })
         
     return HttpResponse(json.dumps(response_obj), "application/json")
+    
+def _find_cards(starting_letters):
+    cards = _get_card_list()
+    bisector = len(cards) / 2
+    card = cards[bisector]
+    if card.startswith(starting_letters):
+        ret_list = [card]
+        bisector += 1
+        while cards[bisector].startswith(starting_letters):
+            ret_list.append(cards[bisector])
+            bisector += 1
+    
+def _get_card_tuples():
+    card_tuples = None# cache.get('card_tuples', None)
+    if not card_tuples:
+        cards = _get_card_list()
+        card_tuples = [{'value' : re.sub(r'[^a-zA-Z0-9 ]+', '', card), 'data' : card }
+            for card in cards]
+        cache.set('card_tuples', card_tuples, None)
+        
+    return card_tuples
+    
+def _get_card_list():
+    card_list = []# cache.get('card_list', [])
+
+    if not card_list:
+        for card in Card.objects.all().order_by('name'):
+            types = list(card.types.all())
+            for excluded_type in EXCLUDED_CARD_TYPES:
+                if excluded_type in types:
+                    break
+            else:
+                card_list.append(card.name)
+        
+        cache.set('card_list', card_list, None) # cache indefinitely
+
+    return card_list
