@@ -43,8 +43,8 @@ $('#locations input[name=chosen_location]').on('change', function() {
 });
 
 $('.autocomplete').autocomplete({
-   //serviceUrl: '/json/',
-   lookup: cardList,
+   serviceUrl: '/suggestions/',
+   //lookup: cardList,
    onSelect: function(suggestion) {
      alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
    }
