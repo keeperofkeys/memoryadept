@@ -48,7 +48,8 @@ def cardListJSON(request):
     
 def suggestions(request):
     search_string = request.GET.get('query')
-    card_list
+    card_list = _get_card_list()
+    
     
 def location_contents(request, location_id):
     location = Location.objects.get(id=location_id)
@@ -76,18 +77,61 @@ def get_or_create_location(request):
     return HttpResponse(json.dumps(response_obj), "application/json")
     
 def _find_cards(starting_letters):
+    starting_letters = starting_letters.lower()
     cards = _get_card_list()
-    bisector = len(cards) / 2
-    card = cards[bisector]
-    if card.startswith(starting_letters):
-        ret_list = [card]
-        bisector += 1
-        while cards[bisector].startswith(starting_letters):
-            ret_list.append(cards[bisector])
-            bisector += 1
+    chunk_length = len(starting_letters)
+    
+    def home_in(bisector=len(cards)/2, rang=(0, len(cards)) ):
+    # returns index of a card (not necessarily the first) that
+    # matches the starting_letters
+        print "bisector: %s, range: %s" % (bisector, rang)
+        card = cards[bisector].lower()
+        print card
+        if card.startswith(starting_letters):
+            #pdb.set_trace()
+            return bisector, rang
+        
+        if starting_letters < card[:chunk_length].lower():
+            """if bisector - r[0] <= 1: # nothing left to search
+                #
+                return None, r"""
+            rang = (rang[0], bisector - 1)
+        else:
+            """if r[1] - bisector <= 1: # nothing left to search
+                #pdb.set_trace()
+                return None, r"""
+            rang = (bisector + 1, rang[1])
+            
+        if rang[1] <= rang[0]:
+            return None, rang
+            
+        bisector = rang[0] + ((rang[1] - rang[0]) / 2)
+            
+        return home_in(bisector, rang)
+        
+    i, r = home_in()
+    if i is None:
+        return []
+        
+    while i > 0 and cards[i-1].lower().startswith(starting_letters):
+        i -= 1
+    
+    ret_list = []
+    for j in range(i, r[1] +1):
+        card = cards[j]
+        if card.lower().startswith(starting_letters):
+            ret_list.append(card)
+        else:
+            break
+    
+    return ret_list
+        
+            
+
+        
     
 def _get_card_tuples():
-    card_tuples = None# cache.get('card_tuples', None)
+    card_tuples = cache.get('card_tuples', None)
     if not card_tuples:
         cards = _get_card_list()
         card_tuples = [{'value' : re.sub(r'[^a-zA-Z0-9 ]+', '', card), 'data' : card }
@@ -97,10 +141,10 @@ def _get_card_tuples():
     return card_tuples
     
 def _get_card_list():
-    card_list = []# cache.get('card_list', [])
+    card_list = cache.get('card_list', [])
 
     if not card_list:
-        for card in Card.objects.all().order_by('name'):
+        for card in Card.objects.all().order_by('name'): 
             types = list(card.types.all())
             for excluded_type in EXCLUDED_CARD_TYPES:
                 if excluded_type in types:
