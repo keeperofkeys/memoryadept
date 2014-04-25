@@ -7,25 +7,18 @@ def find_cards(starting_letters):
     def home_in(bisector=len(cards)/2, rang=(0, len(cards)) ):
     # returns index of a card (not necessarily the first) that
     # matches the starting_letters
-        print "bisector: %s, range: %s" % (bisector, rang)
         card = cards[bisector].lower()
-        print card
+
         if card.startswith(starting_letters):
-            #pdb.set_trace()
             return bisector, rang
         
         if starting_letters < card[:chunk_length].lower():
-            """if bisector - r[0] <= 1: # nothing left to search
-                #
-                return None, r"""
             rang = (rang[0], bisector - 1)
+            
         else:
-            """if r[1] - bisector <= 1: # nothing left to search
-                #pdb.set_trace()
-                return None, r"""
             rang = (bisector + 1, rang[1])
             
-        if rang[1] <= rang[0]:
+        if rang[1] <= rang[0]: # range has closed up to nothing
             return None, rang
             
         bisector = rang[0] + ((rang[1] - rang[0]) / 2)

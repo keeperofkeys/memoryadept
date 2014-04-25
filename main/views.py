@@ -51,8 +51,7 @@ def suggestions(request):
     card_list = find_cards(search_string)
     response_list = { 'suggestions' : [{ 'value' : card, 'data' : card } for card in card_list] }
     return HttpResponse(json.dumps(response_list), "application/json")
-    
-    
+
 def location_contents(request, location_id):
     location = Location.objects.get(id=location_id)
     #pdb.set_trace()
@@ -63,7 +62,6 @@ def get_or_create_location(request):
     name = request.POST.get('new-location')
     response_obj = {}
     try:
-        #pdb.set_trace()
         location, flag = Location.objects.get_or_create(name=name)
         response_obj.update({
             'location_id' : location.id,
