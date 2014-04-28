@@ -54,7 +54,6 @@ def suggestions(request):
 
 def location_contents(request, location_id):
     location = Location.objects.get(id=location_id)
-    #pdb.set_trace()
     cards = [(card.name, card.cardmap_owner, card.cardmap__is_proxy, card.cardmap__is_foil ) for card in location.cards.all()]
     return HttpResponse(json.dumps(cards), "application/json")
     

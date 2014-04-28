@@ -46,7 +46,7 @@ $('.autocomplete').autocomplete({
    serviceUrl: '/suggestions/',
    //lookup: cardList,
    onSelect: function(suggestion) {
-     alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+     console.log('selected: ' + suggestion.value + ', ' + suggestion.data);
    }
 });
 
