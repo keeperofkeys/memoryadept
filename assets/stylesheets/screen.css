@@ -75,29 +75,42 @@ body {
 
 /* line 9, ../sass/_base.scss */
 form {
-  clear: both;
   margin-top: 15px;
 }
 
-/* line 2, ../sass/_tables.scss */
+/* line 1, ../sass/_tables.scss */
+#create-new {
+  float: right;
+  width: 400px;
+}
+
+/* line 6, ../sass/_tables.scss */
+#locations {
+  width: 525px;
+}
+/* line 9, ../sass/_tables.scss */
 #locations li {
   float: left;
-  width: 45%;
+  width: 210px;
 }
-/* line 6, ../sass/_tables.scss */
+/* line 13, ../sass/_tables.scss */
 #locations li:nth-child(2n) {
-  margin-right: 5%;
+  margin-right: 4px;
 }
-/* line 11, ../sass/_tables.scss */
+/* line 18, ../sass/_tables.scss */
 #locations + p {
   clear: left;
 }
 
-/* line 17, ../sass/_tables.scss */
-#edit-card-list td, #edit-card-list td {
+/* line 25, ../sass/_tables.scss */
+#edit-card-list table {
+  clear: both;
+}
+/* line 29, ../sass/_tables.scss */
+#edit-card-list th, #edit-card-list td {
   width: 400px;
 }
-/* line 19, ../sass/_tables.scss */
-#edit-card-list td:first-child, #edit-card-list td:first-child {
-  width: 100px;
+/* line 31, ../sass/_tables.scss */
+#edit-card-list th:first-child, #edit-card-list td:first-child {
+  width: 40px;
 }

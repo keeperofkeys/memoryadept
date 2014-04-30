@@ -5,6 +5,7 @@ var autocompleteSettings = {
         console.log('selected: ' + suggestion.value + ', ' + suggestion.data);
       }
     };
+
 $('#create-new').on('submit', function(e) {
   e.preventDefault();
   $.ajax({
@@ -17,8 +18,8 @@ $('#create-new').on('submit', function(e) {
       if (json.location_id) {
         if (json.new === true) {
           // add to list
-          var newHtml = '<input type="radio" name="chosen_location" id="cb' + json.location_id + '">';
-          newHtml += '<label for="cb' + json.location_id + '">' + json.location_name + '</label>';
+          var newHtml = '<li><input type="radio" name="chosen_location" id="cb' + json.location_id + '">';
+          newHtml += '<label for="cb' + json.location_id + '">' + json.location_name + '</label></li>';
           $('#locations').append($(newHtml));
         } 
         $('#locations #cb' + json.location_id).prop('checked', true);

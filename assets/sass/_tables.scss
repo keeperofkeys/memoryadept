@@ -1,10 +1,17 @@
+#create-new {
+  float: right;
+  width: 400px;
+}
+
 #locations {
+  width: 525px;
+  
   li {
     float: left;
-    width: 45%;
+    width: 210px;
     
     &:nth-child(2n) {
-      margin-right: 5%;
+      margin-right: 4px;
     }
   }
   
@@ -14,10 +21,15 @@
 }
 
 #edit-card-list {
-  td, td {
+
+  table {
+    clear: both;
+  }
+  
+  th, td {
     width: 400px;
     &:first-child {
-      width: 100px;
+      width: 40px;
     }
   }
 }

@@ -3,8 +3,15 @@
 {% block content %}
 <h1>Edit {{ location }}</h1>
 
-<p>Select a location...</p>
+<form id="create-new">
+  <p>... or create a new one...</p>
+  <input name="new-location" id="new-location" type="text">
+  <button type="submit">Create</button>
+</form>
+
+
 <form id="edit-card-list" action="/update-location">
+  <p>Select a location...</p>
   <ul id="locations">
   {% for loc in locations %}
     <li>
@@ -12,9 +19,7 @@
     </li>
   {% endfor %}
   </ul>
-  <p>... or create a new one...</p>
-  <input name="new-location" id="new-location" type="text">
-  <button type="submit">Create</button>
+  
   <table>
     <tr>
       <th>#</th>
