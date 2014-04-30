@@ -88,12 +88,16 @@ form {
 #locations li:nth-child(2n) {
   margin-right: 5%;
 }
+/* line 11, ../sass/_tables.scss */
+#locations + p {
+  clear: left;
+}
 
-/* line 14, ../sass/_tables.scss */
+/* line 17, ../sass/_tables.scss */
 #edit-card-list td, #edit-card-list td {
   width: 400px;
 }
-/* line 16, ../sass/_tables.scss */
+/* line 19, ../sass/_tables.scss */
 #edit-card-list td:first-child, #edit-card-list td:first-child {
   width: 100px;
 }

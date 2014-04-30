@@ -1,8 +1,6 @@
 "use strict";
-var cardList,
-    autocompleteSettings = {
+var autocompleteSettings = {
       serviceUrl: '/suggestions/',
-      //lookup: cardList,
       onSelect: function(suggestion) {
         console.log('selected: ' + suggestion.value + ', ' + suggestion.data);
       }
@@ -56,6 +54,26 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
 }).on('click', '.deleteRow',function(e) {
   e.preventDefault();
   $(this).closest('tr').remove();
+}).on('submit', function(e) {
+  e.preventDefault();
+  var $form = $(this),
+      data = $form.serializeArray(),
+      locationId = $('input[name=chosen_location]:checked').val();
+
+  // validate
+  if (!locationId) {
+    alert('choose a location');
+    return;
+  }
+
+  $.ajax({
+     url: $form.attr('action'),
+     method: 'post',
+     data: data,
+     success: function(response) {
+       alert('updated');
+     }
+  });
 });
 
 $('.autocomplete').autocomplete(autocompleteSettings);
@@ -73,14 +91,3 @@ function addTableRow() {
       $inputs.eq(1).autocomplete(autocompleteSettings).val('');
 }
 
-$(document).ready(function() {
-    $.ajax({
-       url: '/json/',
-       method: 'post',
-       async: false,
-       dataType: 'json',
-       success: function(json) {
-         cardList = json;
-       }
-    });
-});

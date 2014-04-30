@@ -8,6 +8,9 @@
     }
   }
   
+  &+ p {
+    clear: left;
+  }
 }
 
 #edit-card-list {
