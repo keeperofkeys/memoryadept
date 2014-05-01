@@ -26,6 +26,7 @@ class Type(models.Model):
 
 class Card(models.Model):
     name = models.CharField(max_length=1024)
+    search_name = models.CharField(max_length=1024, blank=True, editable=False)
     types = models.ManyToManyField(Type, blank=True)
     sets = models.ManyToManyField(Set, blank=True, null=True)
     
@@ -34,6 +35,11 @@ class Card(models.Model):
         
     class Meta:
         ordering = ['name']
+        
+    def save(self, *args, **kwargs):
+        if not self.search_name:
+            search_name = re.sub(r'[^a-zA-Z0-9 ]+', '', self.name)
+        super(Card, self).save(*args, **kwargs)
     
 class Person(models.Model):
     name = models.CharField(max_length=100)
@@ -47,6 +53,7 @@ class CardMap(models.Model):
     owner = models.ForeignKey(Person, null=True)
     is_proxy = models.BooleanField(default=False)
     is_foil = models.BooleanField(default=False)
+    quantity = models.IntegerField(default=1)
     
     def __unicode__(self):
         return '%s\'s %s in %s' % (self.owner, self.card, self.location)
@@ -56,7 +63,8 @@ class Location(models.Model):
     description = models.TextField(blank=True)
     cards = models.ManyToManyField(Card, through=CardMap, blank=True)
     owner = models.ForeignKey(Person, blank=True, null=True)
-    format = models.CharField(choices=FORMAT_CHOICES, max_length=1, default='')
+    format = models.CharField(choices=FORMAT_CHOICES, blank=True, max_length=1, default='')
+    is_in = models.ForeignKey('Location', null=True, blank=True, default=None)
     
     def __unicode__(self):
         return self.name
