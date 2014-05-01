@@ -85,7 +85,7 @@ function addTableRow() {
       $rowTemplate = $table.find('tr:last-child').clone(false),
       $newRow = $table.append($rowTemplate).find('tr:last-child'),
       $inputs = $newRow.find('input');
-      $inputs.get(0).name = 'n' + $rows.length;
+      $inputs.eq(0).val(1).attr('name', 'n' + $rows.length);
       $inputs.get(1).name = 'c' + $rows.length;
       
       // attach new Autocomplete() 

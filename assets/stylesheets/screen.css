@@ -105,12 +105,13 @@ form {
 /* line 25, ../sass/_tables.scss */
 #edit-card-list table {
   clear: both;
+  width: 300px;
 }
-/* line 29, ../sass/_tables.scss */
-#edit-card-list th, #edit-card-list td {
-  width: 400px;
+/* line 37, ../sass/_tables.scss */
+#edit-card-list th.no input, #edit-card-list td.no input {
+  width: 30px;
 }
-/* line 31, ../sass/_tables.scss */
-#edit-card-list th:first-child, #edit-card-list td:first-child {
-  width: 40px;
+/* line 41, ../sass/_tables.scss */
+#edit-card-list th.button, #edit-card-list td.button {
+  width: 100px;
 }

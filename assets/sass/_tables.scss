@@ -24,12 +24,22 @@
 
   table {
     clear: both;
+    width: 300px;
   }
   
   th, td {
-    width: 400px;
-    &:first-child {
-      width: 40px;
+    &.name {
+      //width: 100px;
+    }
+    &.no {
+      //width: 40px;
+      
+      input {
+        width: 30px;
+      }
+    }
+    &.button {
+      width: 100px;
     }
   }
 }
