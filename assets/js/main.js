@@ -8,7 +8,7 @@ var autocompleteSettings = {
 
 $('#create-new').on('submit', function(e) {
   e.preventDefault();
-  newLocation = $('#new-location').val();
+  var newLocation = $('#new-location').val();
   if (newLocation.toLowerCase() == 'limbo') return; // TODO: error message
   $.ajax({
     url: '/create-location',
@@ -20,7 +20,7 @@ $('#create-new').on('submit', function(e) {
       if (json.location_id) {
         if (json.new === true) {
           // add to list
-          var newHtml = '<li><input type="radio" name="chosen_location" id="cb' + json.location_id + '">';
+          var newHtml = '<li><input type="radio" name="chosen_location" id="cb' + json.location_id + '" value="'+json.location_id+'">';
           newHtml += '<label for="cb' + json.location_id + '">' + json.location_name + '</label></li>';
           $('#locations').append($(newHtml));
         } 
@@ -71,7 +71,7 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
     return;
   }
 
-  data = { 
+  data = {
     cards: JSON.stringify(harvestData($form)),//$form.serializeArray(),
     location: locationId
   };
