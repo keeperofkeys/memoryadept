@@ -54,7 +54,8 @@ def suggestions(request):
 
 def location_contents(request, location_id):
     location = Location.objects.get(id=location_id)
-    cards = [(card.name, card.cardmap_owner, card.cardmap__is_proxy, card.cardmap__is_foil ) for card in location.cards.all()]
+    cards = [{ 'count' : cm.quantity, 'name' : cm.card.name }
+        for cm in CardMap.objects.filter(location=location)]
     return HttpResponse(json.dumps(cards), "application/json")
     
 def get_or_create_location(request):
@@ -97,7 +98,6 @@ def update_location(request):
         quantity = new_cards[new_card_name]['count']
         if not quantity:
             quantity = 1
-        #print 'old:%s, new:%s' % (old_card_name, new_card_name)
 
         if new_card_name < old_card_name:
             # new_card_name not in existing cards at location
@@ -156,8 +156,8 @@ def update_location(request):
             existing.save()
 
     output = {
-        'location_data' : [{ cm.card.name : { 'count' : cm.quantity } } for
-            cm in CardMap.objects.filter(location=location)],
+        'location_data' : [{ 'count' : cm.quantity, 'name' : cm.card.name }
+            for cm in CardMap.objects.filter(location=location)],
         'drop_list' : drop_list,
     }
             

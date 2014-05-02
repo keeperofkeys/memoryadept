@@ -36,15 +36,17 @@ $('#create-new').on('submit', function(e) {
 // clicked radio or made new location
 $('#locations input[name=chosen_location]').on('change', function() {
   // load cards
-  var locationId = this.id.substr(2), // slice off "cb" prefix
-      $table = $('#edit-card-list table'),
-      $rowTemplate = $table.find('tr:last-child');
+  var locationId = this.id.substr(2); // slice off "cb" prefix
+  $('#edit-card-list tr:not(:first-child) + tr').remove();
+      
   $.ajax({
     url: '/location-contents/' + locationId,
     method: 'post',
     success: function(cards) {
-      for (var i=0; i<cards.length; i++) {
-        $table.append($rowTemplate);
+      for (var i in cards) {
+        if (cards.hasOwnProperty(i)) {
+          addTableRow(cards[i]);
+        }
       }
     }
   });
@@ -86,20 +88,29 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
 
 $('.autocomplete').autocomplete(autocompleteSettings);
 
-function addTableRow() {
+function addTableRow(data) {
   var $table = $('#edit-card-list table'),
       $rows = $table.find('tr:not(:first-child)'), // exclude heading
       $rowTemplate = $table.find('tr:last-child').clone(false),
       $newRow = $table.append($rowTemplate).find('tr:last-child'),
       $oldInputs = $rows.eq(0).find('input'),
       $newInputs = $newRow.find('input');
-      
+
   $newInputs.each(function(j) {
-    $(this).val('').attr('name', $oldInputs.eq(j).fieldName() + '-' + $rows.length);
+    var field = $oldInputs.eq(j).fieldName(),
+        $input = $(this);
+
+    $input.attr('name', field + '-' + $rows.length);
+    if (data && data[field]) {
+      $input.val(data[field]);
+    } else {
+      $input.val('');
+    }
   });
-      
+
   // attach new Autocomplete() 
-  $newInputs.eq(1).autocomplete(autocompleteSettings).val('');
+  $newInputs.filter('[name^="name"]').autocomplete(autocompleteSettings);
+ 
 }
 
 function harvestData($form) {
