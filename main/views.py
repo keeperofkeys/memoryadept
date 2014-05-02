@@ -76,7 +76,7 @@ def get_or_create_location(request):
     return HttpResponse(json.dumps(response_obj), "application/json")
     
 def update_location(request):
-    pdb.set_trace()
+    #pdb.set_trace()
     location_id = request.POST.get('location')
     location = Location.objects.get(id=location_id)
     limbo = Location.objects.get(name='limbo')
@@ -95,9 +95,12 @@ def update_location(request):
         new_card_name = new_card_names[ncp]
         card = Card.objects.get(name=new_card_name)
         quantity = new_cards[new_card_name]['count']
-        print 'old:%s, new:%s' % (old_card_name, new)
+        if not quantity:
+            quantity = 1
+        #print 'old:%s, new:%s' % (old_card_name, new_card_name)
+
         if new_card_name < old_card_name:
-            # new_card_name not in existing cards at location 
+            # new_card_name not in existing cards at location
             # TODO: is_foil and other fields on through model
             CardMap.objects.create(card=card, quantity=quantity,
                 location=location)
@@ -116,15 +119,16 @@ def update_location(request):
                 drop_list.append({ old_card_name : { 'count' : removed_count } })
                 existing.quantity = quantity
                 existing.save()
-                
+
             # else do nothing as same number of that card already there
-                
+
             ncp += 1
             ocp += 1
             continue
             
         else: # new_card_name > old_card_name => card removed
-            existing = CardMap.objects.get(card=card, location=location)
+            old_card = Card.objects.get(name=old_card_name)
+            existing = CardMap.objects.get(card=old_card, location=location)
             drop_list.append({ old_card_name : { 'count' : existing.quantity } })
             existing.location = limbo
             existing.save()
@@ -132,13 +136,15 @@ def update_location(request):
             continue
         
     #end of while loop
-    
     if ocp >= len(old_card_names): # more new cards left over to add
         for j in range(ncp, len(new_card_names)):
             new_card_name = new_card_names[j]
             card = Card.objects.get(name=new_card_name)
+            quantity = new_cards[new_card_name]['count']
+            if not quantity:
+                quantity = 1
             # TODO: extra through fields
-            CardMap.objects.create(location=location, card=card, quantity=new_cards[new_card_name]['count'])
+            CardMap.objects.create(location=location, card=card, quantity=quantity)
             
     elif ncp >= len(new_card_names): # more old cards left over to remove
         for j in range(ocp, len(old_card_names)):
@@ -148,7 +154,7 @@ def update_location(request):
             drop_list.append({ old_card_name : { 'count' : existing.quantity } })
             existing.location = limbo
             existing.save()
-            
+
     output = {
         'location_data' : [{ cm.card.name : { 'count' : cm.quantity } } for
             cm in CardMap.objects.filter(location=location)],

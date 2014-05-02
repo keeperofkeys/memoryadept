@@ -108,12 +108,15 @@ function harvestData($form) {
   $form.find('tr:not(:first-child)').each(function() {
     var obj = {}, name;
     $(this).find('input').each(function() {
-      var $this = $(this);
-      obj[$this.fieldName()] = $this.val(); // could potentially be empty
+      var $this = $(this),
+          field = $this.fieldName();
+      obj[field] = makeNice($this.val()); // could potentially be empty
     });
     name = obj.name;
-    //delete obj.name; // not strictly needed but let's leave it in for now
-    response[name] = obj;
+    if (name) {
+      //delete obj.name; // not strictly needed but let's leave it in for now
+      response[name] = obj;
+    }
   });
   return response;
 }
@@ -122,4 +125,16 @@ jQuery.prototype.fieldName = function() {
   var bits = this.get(0).name.split('-');
   return bits[0];
 };
+
+function makeNice(n) {
+  // convert to number if possible
+  if (isNaN(Number(n))) {
+    return n;
+  }
+  n = Number(n);
+  if (Math.floor(n) - n == 0) { // integer
+    return Math.floor(n);
+  }
+  return n;
+}
 
