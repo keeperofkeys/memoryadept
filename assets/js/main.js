@@ -8,11 +8,13 @@ var autocompleteSettings = {
 
 $('#create-new').on('submit', function(e) {
   e.preventDefault();
+  newLocation = $('#new-location').val();
+  if (newLocation.toLowerCase() == 'limbo') return; // TODO: error message
   $.ajax({
     url: '/create-location',
     method: 'post',
     data: {
-      'new-location' : $('#new-location').val()
+      'new-location' : newLocation
     },
     success: function(json) {
       if (json.location_id) {
@@ -58,8 +60,8 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
 }).on('submit', function(e) {
   e.preventDefault();
   var $form = $(this),
-      data = $form.serializeArray(),
-      locationId = $('input[name=chosen_location]:checked').val();
+      locationId = $('input[name=chosen_location]:checked').val(),
+      data;
 
   // validate
   if (!locationId) {
@@ -67,6 +69,11 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
     return;
   }
 
+  data = { 
+    cards: JSON.stringify(harvestData($form)),//$form.serializeArray(),
+    location: locationId
+  };
+  
   $.ajax({
      url: $form.attr('action'),
      method: 'post',
@@ -84,11 +91,35 @@ function addTableRow() {
       $rows = $table.find('tr:not(:first-child)'), // exclude heading
       $rowTemplate = $table.find('tr:last-child').clone(false),
       $newRow = $table.append($rowTemplate).find('tr:last-child'),
-      $inputs = $newRow.find('input');
-      $inputs.eq(0).val(1).attr('name', 'n' + $rows.length);
-      $inputs.get(1).name = 'c' + $rows.length;
+      $oldInputs = $rows.eq(0).find('input'),
+      $newInputs = $newRow.find('input');
       
-      // attach new Autocomplete() 
-      $inputs.eq(1).autocomplete(autocompleteSettings).val('');
+  $newInputs.each(function(j) {
+    $(this).val('').attr('name', $oldInputs.eq(j).fieldName() + '-' + $rows.length);
+  });
+      
+  // attach new Autocomplete() 
+  $newInputs.eq(1).autocomplete(autocompleteSettings).val('');
 }
+
+function harvestData($form) {
+  // iterate over rows; 
+  var response = {};
+  $form.find('tr:not(:first-child)').each(function() {
+    var obj = {}, name;
+    $(this).find('input').each(function() {
+      var $this = $(this);
+      obj[$this.fieldName()] = $this.val(); // could potentially be empty
+    });
+    name = obj.name;
+    //delete obj.name; // not strictly needed but let's leave it in for now
+    response[name] = obj;
+  });
+  return response;
+}
+
+jQuery.prototype.fieldName = function() {
+  var bits = this.get(0).name.split('-');
+  return bits[0];
+};
 

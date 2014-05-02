@@ -50,7 +50,7 @@ class Person(models.Model):
 class CardMap(models.Model):
     location = models.ForeignKey('Location')
     card = models.ForeignKey(Card)
-    owner = models.ForeignKey(Person, null=True)
+    owner = models.ForeignKey(Person, null=True, blank=True)
     is_proxy = models.BooleanField(default=False)
     is_foil = models.BooleanField(default=False)
     quantity = models.IntegerField(default=1)
