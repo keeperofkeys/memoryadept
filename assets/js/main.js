@@ -1,6 +1,10 @@
 "use strict";
 var autocompleteSettings = {
       serviceUrl: '/suggestions/',
+      minChars: 3,
+      onSearchStart: function() {
+        //alert('what the..?');
+      },
       onSelect: function(suggestion) {
         console.log('selected: ' + suggestion.value + ', ' + suggestion.data);
       }
@@ -25,7 +29,7 @@ $('#create-new').on('submit', function(e) {
           $('#locations').append($(newHtml));
         } 
         $('#locations #cb' + json.location_id).prop('checked', true);
-
+        populateNewLocation(json.location_id);
       } else {
         alert('fell over');
       }
@@ -37,19 +41,8 @@ $('#create-new').on('submit', function(e) {
 $('#locations input[name=chosen_location]').on('change', function() {
   // load cards
   var locationId = this.id.substr(2); // slice off "cb" prefix
-  $('#edit-card-list tr:not(:first-child) + tr').remove();
-      
-  $.ajax({
-    url: '/location-contents/' + locationId,
-    method: 'post',
-    success: function(cards) {
-      for (var i in cards) {
-        if (cards.hasOwnProperty(i)) {
-          addTableRow(cards[i]);
-        }
-      }
-    }
-  });
+  
+  populateNewLocation(locationId);
 });
 
 $('#edit-card-list').on('click', '.addRow',function(e) {
@@ -111,6 +104,30 @@ function addTableRow(data) {
   // attach new Autocomplete() 
   $newInputs.filter('[name^="name"]').autocomplete(autocompleteSettings);
  
+}
+
+function populateNewLocation(locationId) {
+  $.ajax({
+    url: '/location-contents/' + locationId,
+    method: 'post',
+    success: function(cards) {
+      rebuildTable(cards);
+    }
+  });
+}
+
+function rebuildTable(cards) {
+  $('#edit-card-list tr:not(:first-child) + tr').remove();
+  if (cards.length > 0) {
+    for (var i in cards) {
+      if (cards.hasOwnProperty(i)) {
+        addTableRow(cards[i]);
+      }
+    }
+    $('#edit-card-list tr:first-child + tr').remove();
+  } else {
+    $('#edit-card-list tr:first-child + tr input').val('');
+  }
 }
 
 function harvestData($form) {
