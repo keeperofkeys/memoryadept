@@ -3,7 +3,7 @@ memoryadept
 
 Memory Adept - keep track of the whereabouts of your Magic cards
 
-This project was inspired by a common problem I have: where are my copies of Path To Exile?
+This project was inspired by a common question I have: where are my copies of Path To Exile?
 
 The premise is very simple: you register locations (could be decks, but that pile of cards beside your bed is equally valid) and tell memoryadept what's currently there. Then, a simple search will help you retrieve your Paths when they're needed.
 
