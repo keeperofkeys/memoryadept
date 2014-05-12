@@ -63,7 +63,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', #'django.db.backends.sqlite3',
         'NAME': 'memoryadept', #os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': 'root',
-        'PASSWORD': '9while9',
+        'PASSWORD': 'root_password',
     }
 }
 
