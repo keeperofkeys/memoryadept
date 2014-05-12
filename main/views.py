@@ -10,10 +10,13 @@ from main.forms import LocationForm
 from main.models import Location, Card, Type, CardMap
 from main.utils import get_card_list, get_card_tuples, find_cards
 
-EXCLUDED_CARD_TYPES = [
-    Type.objects.get(name='Plane'),
-    Type.objects.get(name='Scheme'),
-]
+try:
+    EXCLUDED_CARD_TYPES = [
+        Type.objects.get(name='Plane'),
+        Type.objects.get(name='Scheme'),
+    ]
+except:
+    EXCLUDED_CARD_TYPES = []
 
 @csrf_exempt
 def newLocation(request):
