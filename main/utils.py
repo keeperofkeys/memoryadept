@@ -1,29 +1,32 @@
 from django.core.cache import cache
+from models import Location, Card
+import math
+
 def find_cards(starting_letters):
     starting_letters = starting_letters.lower()
     cards = get_card_list()
     chunk_length = len(starting_letters)
     
-    def home_in(bisector=len(cards)/2, rang=(0, len(cards)) ):
+    def home_in(jab=len(cards)/2, rang=(0, len(cards)) ):
     # returns index of a card (not necessarily the first) that
     # matches the starting_letters
-        card = cards[bisector].lower()
+        card = cards[jab].lower()
 
         if card.startswith(starting_letters):
-            return bisector, rang
+            return jab, rang
         
         if starting_letters < card[:chunk_length].lower():
-            rang = (rang[0], bisector - 1)
+            rang = (rang[0], jab - 1)
             
         else:
-            rang = (bisector + 1, rang[1])
+            rang = (jab + 1, rang[1])
             
         if rang[1] <= rang[0]: # range has closed up to nothing
             return None, rang
             
-        bisector = rang[0] + ((rang[1] - rang[0]) / 2)
+        jab = rang[0] + int(math.ceil((rang[1] - rang[0]) / 2)) 
             
-        return home_in(bisector, rang)
+        return home_in(jab, rang)
         
     i, r = home_in()
     if i is None:
