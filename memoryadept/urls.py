@@ -10,8 +10,8 @@ from main.views import *
 admin.autodiscover()
 
 urlpatterns = patterns('',              
-    url(r'^$', newLocation),
-    url(r'^locations$', locationEdit, name='location-edit'),
+    #url(r'^$', newLocation),
+    url(r'^$', locationEdit, name='location-edit'),
     url(r'^suggestions', suggestions, name='suggestions'),
     url(r'^create-location$', get_or_create_location, name="get_or_create_location"),
     url(r'^update-location$', update_location, name="update_location"),

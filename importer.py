@@ -40,4 +40,7 @@ def card_generator(path="AllSets.json"):
         for card_data in set_data['cards']:            
             yield (card_data, set_data)
 
+def fix_search_names():
+    for card in Card.objects.all():
+        print '%s, %s' % (card.name, re.sub(r'[^a-zA-Z0-9]+', '', self.name))
 
