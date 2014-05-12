@@ -22,6 +22,10 @@ def find_cards(starting_letters):
             rang = (jab + 1, rang[1])
             
         if rang[1] <= rang[0]: # range has closed up to nothing
+            card = cards[rang[0]].lower()
+            if card.startswith(starting_letters):
+                return rang[0], rang
+                
             return None, rang
             
         jab = rang[0] + int(math.ceil((rang[1] - rang[0]) / 2)) 
@@ -35,8 +39,8 @@ def find_cards(starting_letters):
     while i > 0 and cards[i-1].lower().startswith(starting_letters):
         i -= 1
     
-    ret_list = []
-    for j in range(i, r[1] +1):
+    ret_list = [cards[i]]
+    for j in range(i+1, r[1] +1):
         card = cards[j]
         if card.lower().startswith(starting_letters):
             ret_list.append(card)
