@@ -8,15 +8,12 @@ from django.views.decorators.csrf import csrf_exempt
 
 from main.forms import LocationForm
 from main.models import Location, Card, Type, CardMap
-from main.utils import get_card_list, get_card_tuples, find_cards
+from main.utils import (get_card_list, get_card_tuples, 
+    find_cards, get_limbo, get_excluded_types)
 
-try:
-    EXCLUDED_CARD_TYPES = [
-        Type.objects.get(name='Plane'),
-        Type.objects.get(name='Scheme'),
-    ]
-except:
-    EXCLUDED_CARD_TYPES = []
+LIMBO = get_limbo()
+
+EXCLUDED_CARD_TYPES = get_excluded_types()
 
 @csrf_exempt
 def newLocation(request):
@@ -41,7 +38,7 @@ def locationEdit(request, location_id=None):
 
     return render(request, 'edit_location.html', {
             'location_selected' : Location.objects.get(id=location_id) if location_id else None,
-            'locations' : Location.objects.all(),
+            'locations' : Location.objects.exclude(id=LIMBO.id),
         })
 
 #AJAX stuff
@@ -83,7 +80,7 @@ def update_location(request):
     #pdb.set_trace()
     location_id = request.POST.get('location')
     location = Location.objects.get(id=location_id)
-    limbo = Location.objects.get(name='limbo')
+    #LIMBO = utils.get_limbo()
     new_cards = json.loads(request.POST.get('cards'))
     new_card_names = [name for name in new_cards.keys()]
     new_card_names.sort()
@@ -118,7 +115,7 @@ def update_location(request):
                 
             elif existing.quantity > quantity:
                 removed_count = existing.quantity - quantity
-                CardMap.objects.create(location=limbo, card=card, quantity=removed_count)
+                CardMap.objects.create(location=LIMBO, card=card, quantity=removed_count)
                 drop_list.append({ old_card_name : { 'count' : removed_count } })
                 existing.quantity = quantity
                 existing.save()
@@ -133,7 +130,7 @@ def update_location(request):
             old_card = Card.objects.get(name=old_card_name)
             existing = CardMap.objects.get(card=old_card, location=location)
             drop_list.append({ old_card_name : { 'count' : existing.quantity } })
-            existing.location = limbo
+            existing.location = LIMBO
             existing.save()
             ocp += 1
             continue
@@ -155,7 +152,7 @@ def update_location(request):
             card = Card.objects.get(name=old_card_name)
             existing = CardMap.objects.get(card=card, location=location)
             drop_list.append({ old_card_name : { 'count' : existing.quantity } })
-            existing.location = limbo
+            existing.location = LIMBO
             existing.save()
 
     output = {

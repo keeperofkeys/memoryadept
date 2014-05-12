@@ -49,6 +49,15 @@ def find_cards(starting_letters):
     
     return ret_list
     
+def get_excluded_types():
+    try:
+        return [
+            Type.objects.get(name='Plane'),
+            Type.objects.get(name='Scheme'),
+        ]
+    except:
+        return []
+    
 def get_card_tuples():
     card_tuples = cache.get('card_tuples', None)
     if not card_tuples:
@@ -65,7 +74,7 @@ def get_card_list():
     if not card_list:
         for card in Card.objects.all().order_by('name'): 
             types = list(card.types.all())
-            for excluded_type in EXCLUDED_CARD_TYPES:
+            for excluded_type in get_excluded_types():
                 if excluded_type in types:
                     break
             else:
@@ -74,3 +83,7 @@ def get_card_list():
         cache.set('card_list', card_list, None) # cache indefinitely
 
     return card_list
+    
+def get_limbo():
+    l, __f = Location.objects.get_or_create(name='limbo')
+    return l
