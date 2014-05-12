@@ -1,3 +1,5 @@
+import re
+
 from django.db import models
 
 FORMAT_CHOICES = (
@@ -29,6 +31,7 @@ class Card(models.Model):
     search_name = models.CharField(max_length=1024, blank=True, editable=False)
     types = models.ManyToManyField(Type, blank=True)
     sets = models.ManyToManyField(Set, blank=True, null=True)
+    search_name = models.CharField(max_length=1024)
     
     def __unicode__(self):
         return self.name
@@ -38,7 +41,7 @@ class Card(models.Model):
         
     def save(self, *args, **kwargs):
         if not self.search_name:
-            search_name = re.sub(r'[^a-zA-Z0-9 ]+', '', self.name)
+            self.search_name = re.sub(r'[^a-zA-Z0-9 ]+', '', self.name) # TODO: handle accents etc
         super(Card, self).save(*args, **kwargs)
     
 class Person(models.Model):

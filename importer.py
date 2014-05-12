@@ -1,4 +1,5 @@
 import json
+import re
 from main.models import *
 
 import pdb
@@ -16,6 +17,7 @@ def go(path="AllSets.json"):
         types = []
         if not 'types' in card_data.keys():
             print 'culprit: %s' % card_data['name']
+            # tokens have no type
             continue
             
         for type_name in card_data['types']:
