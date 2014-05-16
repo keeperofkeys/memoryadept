@@ -102,7 +102,8 @@ function addTableRow(data) {
   });
 
   // attach new Autocomplete() 
-  $newInputs.filter('[name^="name"]').autocomplete(autocompleteSettings);
+  $newInputs.filter('[name^="name"]').autocomplete(autocompleteSettings)
+      .end().filter('[name^="count"]').focus();
  
 }
 
