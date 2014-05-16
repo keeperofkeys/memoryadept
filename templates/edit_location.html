@@ -24,12 +24,13 @@
     <tr>
       <th>#</th>
       <th>card</th>
+      <th></th>
     </tr>
     <tr>
       <td class="no"><input type="text" name="count-0" value="1"></td>
       <td class="name"><input type="text" name="name-0" class="autocomplete"></td>
       <td class="button"><button class="addRow">Add</button></td>
-      <td class="button"><button class="deleteRow">Delete</button></td>
+      <!--<td class="button"><button class="deleteRow">Delete</button></td>-->
     </tr>
   </table>
   <button type="submit" method="post" action="">Done</button>
@@ -38,5 +39,6 @@
 
 {% block extrascript %}
   <script type="text/javascript" src="{% static 'js/jquery.autocomplete.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/CardTable.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 {% endblock %}

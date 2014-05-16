@@ -1,14 +1,16 @@
 "use strict";
-var autocompleteSettings = {
-      serviceUrl: '/suggestions/',
-      minChars: 3,
-      onSearchStart: function() {
-        //alert('what the..?');
-      },
-      onSelect: function(suggestion) {
-        console.log('selected: ' + suggestion.value + ', ' + suggestion.data);
-      }
-    };
+var MA = {}; // namespace
+MA.autocompleteSettings = {
+    serviceUrl: '/suggestions/',
+    minChars: 3,
+    onSearchStart: function() {
+      //alert('what the..?');
+    },
+    onSelect: function(suggestion) {
+      console.log('selected: ' + suggestion.value + ', ' + suggestion.data);
+    }
+  };
+MA.cardTable = new CardTable('#edit-card-list table');
 
 $('#create-new').on('submit', function(e) {
   e.preventDefault();
@@ -22,7 +24,7 @@ $('#create-new').on('submit', function(e) {
     },
     success: function(json) {
       if (json.location_id) {
-        if (json.new === true) {
+        if (json['new'] === true) {
           // add to list
           var newHtml = '<li><input type="radio" name="chosen_location" id="cb' + json.location_id + '" value="'+json.location_id+'">';
           newHtml += '<label for="cb' + json.location_id + '">' + json.location_name + '</label></li>';
@@ -44,10 +46,10 @@ $('#locations input[name=chosen_location]').on('change', function() {
   
   populateNewLocation(locationId);
 });
-
+/*
 $('#edit-card-list').on('click', '.addRow',function(e) {
   e.preventDefault();
-  addTableRow();
+  MA.cardTable.addRow();
   $(this).remove();
 }).on('click', '.deleteRow',function(e) {
   e.preventDefault();
@@ -65,7 +67,7 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
   }
 
   data = {
-    cards: JSON.stringify(harvestData($form)),//$form.serializeArray(),
+    cards: JSON.stringify(MA.cardTable.harvestData()),
     location: locationId
   };
   
@@ -79,7 +81,7 @@ $('#edit-card-list').on('click', '.addRow',function(e) {
   });
 });
 
-$('.autocomplete').autocomplete(autocompleteSettings);
+$('.autocomplete').autocomplete(MA.autocompleteSettings);
 
 function addTableRow(data) {
   var $table = $('#edit-card-list table'),
@@ -102,21 +104,21 @@ function addTableRow(data) {
   });
 
   // attach new Autocomplete() 
-  $newInputs.filter('[name^="name"]').autocomplete(autocompleteSettings)
+  $newInputs.filter('[name^="name"]').autocomplete(MA.autocompleteSettings)
       .end().filter('[name^="count"]').focus();
  
 }
-
+*/
 function populateNewLocation(locationId) {
   $.ajax({
     url: '/location-contents/' + locationId,
     method: 'post',
     success: function(cards) {
-      rebuildTable(cards);
+      MA.cardTable.rebuild(cards);
     }
   });
 }
-
+/*
 function rebuildTable(cards) {
   $('#edit-card-list tr:not(:first-child) + tr').remove();
   if (cards.length > 0) {
@@ -149,21 +151,24 @@ function harvestData($form) {
   });
   return response;
 }
-
+*/
+// tiny jQ plugin helper for retreiveing field names 
+// from name attributes of the form <name>-<n>
 jQuery.prototype.fieldName = function() {
   var bits = this.get(0).name.split('-');
   return bits[0];
 };
 
-function makeNice(n) {
+MA.utils = {
+  makeNice: function(n) {
   // convert to number if possible
-  if (isNaN(Number(n))) {
+    if (isNaN(Number(n))) {
+      return n;
+    }
+    n = Number(n);
+    if (Math.floor(n) - n == 0) { // integer
+      return Math.floor(n);
+    }
     return n;
   }
-  n = Number(n);
-  if (Math.floor(n) - n == 0) { // integer
-    return Math.floor(n);
-  }
-  return n;
 }
-
